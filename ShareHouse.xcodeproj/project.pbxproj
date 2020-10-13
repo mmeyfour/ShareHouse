@@ -13,6 +13,7 @@
 		5071E3A22535F60000D2A119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5071E3A02535F60000D2A119 /* Main.storyboard */; };
 		5071E3A42535F60100D2A119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5071E3A32535F60100D2A119 /* Assets.xcassets */; };
 		5071E3A72535F60100D2A119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5071E3A52535F60100D2A119 /* LaunchScreen.storyboard */; };
+		5071E3B22535F71200D2A119 /* MalagaRentals.json in Resources */ = {isa = PBXBuildFile; fileRef = 5071E3B12535F71200D2A119 /* MalagaRentals.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5071E3A32535F60100D2A119 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5071E3A62535F60100D2A119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5071E3A82535F60100D2A119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5071E3B12535F71200D2A119 /* MalagaRentals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MalagaRentals.json; path = ../../../../../../Downloads/pokemon/MalagaRentals.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,8 @@
 		5071E38E2535F60000D2A119 = {
 			isa = PBXGroup;
 			children = (
+				5071E3B02535F6CF00D2A119 /* Sample */,
+				5071E3AF2535F6CA00D2A119 /* Model */,
 				5071E3992535F60000D2A119 /* ShareHouse */,
 				5071E3982535F60000D2A119 /* Products */,
 			);
@@ -65,6 +69,21 @@
 				5071E3A82535F60100D2A119 /* Info.plist */,
 			);
 			path = ShareHouse;
+			sourceTree = "<group>";
+		};
+		5071E3AF2535F6CA00D2A119 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5071E3B02535F6CF00D2A119 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				5071E3B12535F71200D2A119 /* MalagaRentals.json */,
+			);
+			path = Sample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5071E3B22535F71200D2A119 /* MalagaRentals.json in Resources */,
 				5071E3A72535F60100D2A119 /* LaunchScreen.storyboard in Resources */,
 				5071E3A42535F60100D2A119 /* Assets.xcassets in Resources */,
 				5071E3A22535F60000D2A119 /* Main.storyboard in Resources */,
