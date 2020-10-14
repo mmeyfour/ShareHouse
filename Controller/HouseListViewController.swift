@@ -11,11 +11,15 @@ class HouseListViewController: UIViewController {
 
     let houseListDataSource = HouseListDataSource()
     
+    @IBOutlet weak var segmentController: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        segmentController.setTitle("Lista", forSegmentAt: 0)
+        segmentController.setTitle("Mapa", forSegmentAt: 1)
+
     }
     
     func setupTableView() {
@@ -24,6 +28,15 @@ class HouseListViewController: UIViewController {
         let nib = UINib(nibName: identifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: identifier)
         tableView.dataSource = houseListDataSource
+    }
+    @IBAction func didChangeTheSegment(_ sender: UISegmentedControl) {
+        if segmentController.selectedSegmentIndex == 0 {
+                tableView.isHidden = false
+            }else if segmentController.selectedSegmentIndex == 1 {
+                tableView.isHidden = true
+            }else{
+                tableView.isHidden = true
+            }
     }
 }
 

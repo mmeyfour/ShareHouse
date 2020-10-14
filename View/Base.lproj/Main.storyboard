@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-726" y="62"/>
         </scene>
-        <!--House List-->
+        <!--House List View Controller-->
         <scene sceneID="iJY-U1-Q6t">
             <objects>
                 <viewController id="tas-zr-N1g" customClass="HouseListViewController" customModule="ShareHouse" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,14 +35,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Q-8U-gRW">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <segmentedControl key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="UqD-MP-YjN">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="31"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <segments>
-                                        <segment title="First"/>
-                                        <segment title="Second"/>
-                                    </segments>
-                                </segmentedControl>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="N4G-KV-JTi"/>
@@ -54,8 +46,22 @@
                             <constraint firstItem="Z5Q-8U-gRW" firstAttribute="top" secondItem="N4G-KV-JTi" secondAttribute="top" id="VSs-e4-4Ke"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="House List" id="3AM-1b-KBv"/>
+                    <navigationItem key="navigationItem" id="3AM-1b-KBv">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" id="UqD-MP-YjN">
+                            <rect key="frame" x="106.5" y="5.5" width="201" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="First" width="100"/>
+                                <segment title="Second" width="100"/>
+                            </segments>
+                            <connections>
+                                <action selector="didChangeTheSegment:" destination="tas-zr-N1g" eventType="valueChanged" id="OWn-Az-p2Q"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
+                        <outlet property="segmentController" destination="UqD-MP-YjN" id="qYO-P8-rPk"/>
                         <outlet property="tableView" destination="Z5Q-8U-gRW" id="AYh-GK-fob"/>
                     </connections>
                 </viewController>
