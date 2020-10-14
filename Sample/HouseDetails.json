@@ -1,0 +1,14 @@
+{
+    "date_added": "2020-04-18",
+    "description": "Praesent auctor quam at dignissim bibendum. Etiam a lacus sed quam convallis pellentesque. Duis ut ante et lectus sagittis aliquet quis a elit. Maecenas luctus, nulla eget maximus eleifend, risus turpis euismod metus, vitae mattis nulla erat et ante. Sed ac purus tincidunt elit bibendum semper. Sed pharetra bibendum justo, eget vestibulum nisi vulputate id. Sed non sollicitudin turpis, non pharetra nibh. Mauris ac blandit tellus. Donec at felis sollicitudin ipsum aliquet maximus. Donec ultricies nisl at mauris auctor, eu faucibus diam maximus. Integer ullamcorper magna sit amet cursus dignissim. Vestibulum vel molestie nulla, a ornare lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse potenti. Duis nec congue dolor, et vestibulum justo. Morbi et bibendum libero, eget gravida est.",
+    "floor_area": 125,
+    "is_rented": true,
+    "location": {
+        "latitude": 36.7206672,
+        "longitude": -4.4344486
+    },
+    "monthly_price": 2100,
+    "name": "Arango, 17",
+    "realtor": "JRodriguez",
+    "rooms": 6
+}

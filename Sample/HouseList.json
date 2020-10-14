@@ -1,0 +1,324 @@
+{
+    "antoniojimenezruiz2": {
+        "date_added": "2020-04-27",
+        "description": "Duis vitae mauris pellentesque, sagittis odio ut, tempor nibh. Curabitur eleifend, orci ut bibendum molestie, purus metus placerat ipsum, sed laoreet lorem turpis eget nisi. Donec tellus ante, consequat quis vulputate in, faucibus sed justo. Ut et egestas metus. Proin hendrerit, tellus id auctor lacinia, est nisi tempor sem, quis blandit sapien libero ut sem. Proin viverra, nisl sed tincidunt venenatis, mauris metus vehicula lectus, a dapibus justo quam ut nunc. Proin volutpat neque sed condimentum dictum. Maecenas suscipit sed ligula sit amet sagittis. Praesent convallis ultricies vulputate.",
+        "floor_area": 75,
+        "is_rented": false,
+        "location": {
+            "latitude": 36.7220459,
+            "longitude": -4.4326382
+        },
+        "monthly_price": 1600,
+        "name": "Antonio Jiménez Ruiz, 2",
+        "realtor": "JLopez",
+        "rooms": 4
+    },
+    "arango17": {
+        "date_added": "2020-04-18",
+        "description": "Praesent auctor quam at dignissim bibendum. Etiam a lacus sed quam convallis pellentesque. Duis ut ante et lectus sagittis aliquet quis a elit. Maecenas luctus, nulla eget maximus eleifend, risus turpis euismod metus, vitae mattis nulla erat et ante. Sed ac purus tincidunt elit bibendum semper. Sed pharetra bibendum justo, eget vestibulum nisi vulputate id. Sed non sollicitudin turpis, non pharetra nibh. Mauris ac blandit tellus. Donec at felis sollicitudin ipsum aliquet maximus. Donec ultricies nisl at mauris auctor, eu faucibus diam maximus. Integer ullamcorper magna sit amet cursus dignissim. Vestibulum vel molestie nulla, a ornare lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse potenti. Duis nec congue dolor, et vestibulum justo. Morbi et bibendum libero, eget gravida est.",
+        "floor_area": 125,
+        "is_rented": true,
+        "location": {
+            "latitude": 36.7206672,
+            "longitude": -4.4344486
+        },
+        "monthly_price": 2100,
+        "name": "Arango, 17",
+        "realtor": "JRodriguez",
+        "rooms": 6
+    },
+    "archanda7": {
+        "date_added": "2020-05-06",
+        "description": "Sed malesuada rutrum mi id consequat. Mauris facilisis purus lacinia dapibus feugiat. Etiam condimentum facilisis ipsum sed iaculis. Praesent malesuada, dui et varius fermentum, orci eros eleifend quam, sed eleifend purus ex ut ligula. Aenean consequat nulla ac nulla convallis pellentesque. Vivamus elementum massa neque, vitae ornare metus molestie quis. Curabitur venenatis libero vel metus convallis, nec mollis sapien lacinia. Duis lorem orci, luctus sit amet tempor quis, convallis sed leo. Aenean id scelerisque nisl. Integer sit amet ullamcorper massa. Proin tristique semper dui vitae gravida. Donec arcu neque, varius ut aliquet ut, rhoncus sed orci. Nam pretium orci vitae nisi condimentum porta.",
+        "floor_area": 95,
+        "is_rented": false,
+        "location": {
+            "latitude": 36.723395,
+            "longitude": -4.4361726
+        },
+        "monthly_price": 1800,
+        "name": "Archanda, 7",
+        "realtor": "JLopez",
+        "rooms": 5
+    },
+    "blancocoris3": {
+        "date_added": "2020-04-12",
+        "description": "Nullam facilisis nec dui ut vulputate. Cras neque nisi, placerat sit amet ullamcorper sed, suscipit quis metus. Sed tempor at libero nec placerat. Pellentesque eleifend semper diam. Integer vehicula dolor id mauris eleifend, at faucibus libero semper. In dignissim volutpat sem non laoreet. Sed finibus tincidunt placerat. Donec eu orci ornare, volutpat lacus in, sollicitudin orci. Fusce ut lorem tortor.",
+        "floor_area": 90,
+        "is_rented": true,
+        "location": {
+            "latitude": 36.7204019,
+            "longitude": -4.4333579
+        },
+        "monthly_price": 1200,
+        "name": "Blanco Coris, 3",
+        "realtor": "MRamos",
+        "rooms": 5
+    },
+    "carboneros10": {
+        "date_added": "2020-05-12",
+        "description": "Pellentesque vehicula lobortis nisi. Aenean sed fermentum tellus. Nam gravida nisi justo, sit amet tristique ipsum ornare nec. Quisque nibh libero, tempor nec risus gravida, vulputate lacinia risus. Maecenas nibh lacus, vestibulum id pellentesque et, aliquam non sapien. Donec aliquam in turpis rutrum finibus. Nullam quis ligula mauris. Mauris euismod tempor augue, at interdum nisi scelerisque eu. Maecenas ut sagittis ante, quis condimentum ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras vitae consectetur eros, sit amet sodales est. Duis cursus urna id sapien tempor imperdiet.",
+        "floor_area": 85,
+        "is_rented": false,
+        "location": {
+            "latitude": 36.7230468,
+            "longitude": -4.4308015
+        },
+        "monthly_price": 1500,
+        "name": "Carboneros, 10",
+        "realtor": "JRodriguez",
+        "rooms": 4
+    },
+    "churruca26": {
+        "date_added": "2020-04-25",
+        "description": "Etiam sit amet nisl enim. Duis nec mi sit amet nunc egestas luctus. Curabitur ultrices ultricies quam, at sollicitudin neque fringilla sed. Nulla ut viverra ante. In laoreet, tellus nec faucibus euismod, eros magna tempor lacus, et sodales diam augue sed lacus. Fusce quis justo felis. Suspendisse id mi at neque gravida elementum eget a leo. In hac habitasse platea dictumst. Morbi condimentum lorem ac erat sollicitudin, sit amet tristique tellus iaculis. Nam scelerisque metus vitae laoreet congue. Nunc ut lectus non ante scelerisque ultrices. Integer egestas turpis augue, vel viverra enim vestibulum sed. Phasellus eu euismod tellus. Sed sit amet orci id urna hendrerit placerat.",
+        "floor_area": 105,
+        "is_rented": false,
+        "location": {
+            "latitude": 36.7236477,
+            "longitude": -4.430621
+        },
+        "monthly_price": 1800,
+        "name": "Churruca, 26",
+        "realtor": "MRamos",
+        "rooms": 6
+    },
+    "cisneros15": {
+        "date_added": "2020-01-23",
+        "description": "In rhoncus est sit amet metus auctor condimentum a gravida mauris. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam quis dolor est. Phasellus aliquet, diam quis pharetra pellentesque, mauris dui sodales ipsum, ut consectetur dolor nisl vitae magna. Donec nec consequat justo, non viverra nulla. Nam malesuada, dolor non laoreet luctus, mauris quam fringilla sapien, sed tempus lacus libero eget ante. Suspendisse iaculis tristique consectetur. Sed quis orci vel purus ultricies porta. Proin consequat dictum finibus. Maecenas sodales elementum dolor consectetur porta. Proin id consectetur mi, interdum vehicula mauris. Curabitur non ullamcorper magna.",
+        "floor_area": 65,
+        "is_rented": false,
+        "location": {
+            "latitude": 36.7206021,
+            "longitude": -4.4248444
+        },
+        "monthly_price": 1200,
+        "name": "Cisneros, 15",
+        "realtor": "JRodriguez",
+        "rooms": 4
+    },
+    "compania37": {
+        "date_added": "2020-01-30",
+        "description": "Nam ultrices, metus et bibendum egestas, justo metus viverra nisl, nec sodales lectus est non lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec imperdiet et mauris sed vestibulum. Proin auctor quam tortor, ac tincidunt tellus suscipit scelerisque. Nam tempor dolor eu justo finibus, ut pretium nisl condimentum. Ut vulputate iaculis aliquet. Fusce malesuada lacinia felis, ut sodales est tempus ac. Vivamus sollicitudin pulvinar quam, vitae blandit ipsum iaculis a. Pellentesque euismod tempor nulla ut rutrum.\t",
+        "floor_area": 70,
+        "is_rented": false,
+        "location": {
+            "latitude": 36.721382,
+            "longitude": -4.4234755
+        },
+        "monthly_price": 1450,
+        "name": "Compañía, 37",
+        "realtor": "MRamos",
+        "rooms": 5
+    },
+    "compositorlehmbergruiz2": {
+        "date_added": "2020-03-15",
+        "description": "Cras odio enim, convallis eu congue vel, viverra in dolor. Aliquam erat volutpat. Donec sagittis cursus felis, vel laoreet velit elementum nec. Aliquam sed nibh vel urna hendrerit faucibus. Aliquam non nisl a felis viverra finibus. Vestibulum blandit condimentum massa quis viverra. Phasellus convallis mattis urna ut vestibulum. Sed rhoncus efficitur condimentum. Sed eleifend enim convallis dolor molestie, ut viverra quam accumsan. Suspendisse posuere ultrices massa, et convallis quam cursus eu. Curabitur a tortor nec ipsum vestibulum commodo at molestie justo. Integer tempor feugiat egestas. Quisque tempor tellus in lacus accumsan, a egestas eros consequat. Etiam vel placerat libero.",
+        "floor_area": 110,
+        "is_rented": false,
+        "location": {
+            "latitude": 36.7180924,
+            "longitude": -4.4346513
+        },
+        "monthly_price": 1950,
+        "name": "Compositor Lehmberg Ruiz, 2",
+        "realtor": "JRodriguez",
+        "rooms": 5
+    },
+    "drmanuelperezbryan3": {
+        "date_added": "2020-05-02",
+        "description": "Praesent vel accumsan ex, at fermentum ipsum. Vestibulum varius, sapien at commodo commodo, enim velit rhoncus velit, tempus iaculis lorem erat id arcu. Nullam sed lectus venenatis, sodales orci et, vehicula mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam ac euismod nisi, vel commodo enim. Nullam massa mi, volutpat at viverra vel, iaculis ac lorem. Proin faucibus euismod metus, vitae accumsan ex sollicitudin eu.",
+        "floor_area": 120,
+        "is_rented": false,
+        "location": {
+            "latitude": 36.7199715,
+            "longitude": -4.4220832
+        },
+        "monthly_price": 2200,
+        "name": "Dr Manuel Perez Bryan, 3",
+        "realtor": "JLopez",
+        "rooms": 6
+    },
+    "esperanto5": {
+        "date_added": "2020-01-20",
+        "description": "Nullam accumsan laoreet urna, ac maximus sapien lacinia at. Donec bibendum velit mi, sed dapibus felis commodo auctor. Cras ut vestibulum augue. Pellentesque aliquam volutpat quam, sit amet iaculis lectus condimentum et. Nulla facilisi. Nunc quis aliquet libero. Praesent vehicula ante at gravida ullamcorper.",
+        "floor_area": 50,
+        "is_rented": false,
+        "location": {
+            "latitude": 36.7186397,
+            "longitude": -4.4322956
+        },
+        "monthly_price": 850,
+        "name": "Esperanto, 5",
+        "realtor": "JRodriguez",
+        "rooms": 3
+    },
+    "evaristominguet1": {
+        "date_added": "2020-02-20",
+        "description": "Sed sodales lacus a eros condimentum, at bibendum eros interdum. Vestibulum tincidunt sed turpis non faucibus. Mauris feugiat mi et egestas pulvinar. Mauris mollis porttitor lectus in pellentesque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras at faucibus ante, et convallis magna. In suscipit lacus est, sit amet laoreet libero consectetur vel. Nunc gravida leo augue, ut sollicitudin nibh molestie feugiat. Aliquam ullamcorper massa sed condimentum lobortis. Sed in nisl ac tellus consectetur efficitur sit amet luctus quam. Curabitur varius, magna et aliquet vulputate, nisi ligula placerat sapien, non vestibulum erat dolor eget magna. Praesent non commodo mauris. Aenean ac dapibus mi. Nullam vulputate eu arcu non facilisis.",
+        "floor_area": 75,
+        "is_rented": true,
+        "location": {
+            "latitude": 36.7225875,
+            "longitude": -4.4429884
+        },
+        "monthly_price": 1500,
+        "name": "Evaristo Minguet, 1",
+        "realtor": "JRodriguez",
+        "rooms": 4
+    },
+    "ibngabirol8a": {
+        "date_added": "2020-03-10",
+        "description": "Nullam porttitor urna nunc, pulvinar tempus nunc imperdiet eget. Aenean dignissim augue et massa posuere, in vehicula nunc scelerisque. Proin at massa iaculis, ultricies dolor id, congue risus. Vivamus sit amet libero quis augue volutpat suscipit ac non lacus. Etiam et quam lectus. Quisque feugiat accumsan faucibus. Fusce ut metus non tellus sollicitudin aliquam. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+        "floor_area": 74,
+        "is_rented": false,
+        "location": {
+            "latitude": 36.7215342,
+            "longitude": -4.4298786
+        },
+        "monthly_price": 1030,
+        "name": "Ibn Gabirol, 8A",
+        "realtor": "JRodriguez",
+        "rooms": 4
+    },
+    "lazcano11": {
+        "date_added": "2020-01-27",
+        "description": "Nunc eget lectus sem. Praesent id velit a mauris luctus interdum sed ac sem. Maecenas interdum sagittis risus. Suspendisse nisi mauris, mattis et suscipit eu, tempus mattis purus. Donec et diam eget orci varius rhoncus. Donec eu eros nisi. Vestibulum nibh quam, tristique eu justo in, pulvinar iaculis ante. Donec elementum enim eu pharetra fringilla. Quisque metus odio, tempus sit amet finibus eu, varius sed neque. Maecenas condimentum mi ut feugiat dictum. Nulla tincidunt in tortor non pharetra. Ut in iaculis tellus. Aenean convallis ligula quis egestas laoreet. Cras ultrices pellentesque placerat.",
+        "floor_area": 80,
+        "is_rented": false,
+        "location": {
+            "latitude": 36.7225395,
+            "longitude": -4.4213433
+        },
+        "monthly_price": 1250,
+        "name": "Lazcano, 11",
+        "realtor": "MRamos",
+        "rooms": 4
+    },
+    "riosrosas13": {
+        "date_added": "2020-04-01",
+        "description": "Pellentesque a magna lacinia, rhoncus lacus sit amet, tincidunt diam. Suspendisse vestibulum suscipit iaculis. In non vehicula augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque a convallis dui, at vehicula quam. Vestibulum lobortis tincidunt nulla. Mauris convallis massa sed leo tincidunt, ac aliquam lectus maximus. Etiam nisi lacus, tincidunt ut convallis ut, tincidunt vel justo. Suspendisse lacus libero, iaculis non lobortis vitae, blandit id libero. Morbi feugiat risus in enim tristique, ac molestie diam hendrerit. Donec ac sem purus. Morbi euismod velit dolor, vitae maximus nibh ullamcorper in.",
+        "floor_area": 105,
+        "is_rented": false,
+        "location": {
+            "latitude": 36.719712,
+            "longitude": -4.429117
+        },
+        "monthly_price": 1200,
+        "name": "Rios Rosas, 13",
+        "realtor": "MRamos",
+        "rooms": 5
+    },
+    "sagasta6": {
+        "date_added": "2020-03-03",
+        "description": "Donec sed ornare quam, ut porta mi. Quisque tristique lacus nec ultrices fermentum. Nunc ante nisi, convallis vitae dui nec, scelerisque laoreet lectus. Etiam ornare sed elit ac venenatis. Nulla gravida sem quis nibh vulputate lobortis. Vivamus id velit neque. Etiam pulvinar sed odio nec interdum. Aliquam dapibus ante elit, non convallis tortor varius ac. Maecenas viverra fermentum tellus non volutpat. Etiam vel nibh ex. Ut nunc orci, tincidunt id ultrices quis, consectetur non est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque sem lectus, laoreet vel libero a, ultricies elementum magna. Donec est massa, accumsan in lorem porttitor, euismod rutrum sem. Vestibulum massa risus, facilisis eu neque ac, facilisis fringilla risus. Pellentesque tempor sit amet velit nec imperdiet.",
+        "floor_area": 55,
+        "is_rented": true,
+        "location": {
+            "latitude": 36.718858,
+            "longitude": -4.4239175
+        },
+        "monthly_price": 750,
+        "name": "Sagasta, 6",
+        "realtor": "JRodriguez",
+        "rooms": 3
+    },
+    "salvadordali3": {
+        "date_added": "2020-02-12",
+        "description": "Mauris interdum enim nisi. Nulla lobortis massa a facilisis euismod. Donec vestibulum, mi vel tincidunt porta, lorem felis elementum lectus, a cursus quam sapien et turpis. Donec turpis quam, sollicitudin ac elit vel, elementum auctor ipsum. Phasellus vel sapien orci. Curabitur non suscipit massa. Nunc vel eros purus. Quisque facilisis eros ut velit ultricies, nec rutrum mi elementum. Cras id libero vel lacus tristique hendrerit. Praesent posuere odio orci, nec accumsan elit ultrices a. Nunc blandit lacus tellus, at ultricies ex porta et. In fringilla, sapien a vehicula mollis, erat orci semper nisi, ut accumsan erat enim eget metus. Vivamus elementum erat ac pellentesque aliquam. Aenean pharetra aliquet tortor id cursus. Pellentesque finibus dignissim orci, a venenatis odio eleifend nec. Aliquam erat volutpat.",
+        "floor_area": 65,
+        "is_rented": false,
+        "location": {
+            "latitude": 36.7282306,
+            "longitude": -4.4288599
+        },
+        "monthly_price": 1200,
+        "name": "Salvador Dalí, 3",
+        "realtor": "JLopez",
+        "rooms": 3
+    },
+    "sanbartolome15": {
+        "date_added": "2020-01-10",
+        "description": "Nam erat justo, lacinia pharetra arcu ac, semper consequat velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam cursus diam ut dapibus. Sed porta mattis nulla, sed laoreet lectus facilisis sit amet. Nullam consectetur mauris ultricies placerat porttitor. Nunc scelerisque luctus nulla, id lobortis ex porttitor sit amet. Duis lobortis viverra sem in placerat. Suspendisse potenti. Aenean commodo dolor sit amet tempor gravida. Quisque quis condimentum dui. Quisque fringilla tempor sapien, sit amet convallis libero auctor quis.",
+        "floor_area": 90,
+        "is_rented": false,
+        "location": {
+            "latitude": 36.7274069,
+            "longitude": -4.4230343
+        },
+        "monthly_price": 1650,
+        "name": "San Bartolomé, 15",
+        "realtor": "MRamos",
+        "rooms": 5
+    },
+    "sanpablo1": {
+        "date_added": "2020-02-15",
+        "description": "Nam id libero et diam pellentesque malesuada. Nullam sodales fermentum risus, eget facilisis dui semper ac. Fusce tempus hendrerit dui, quis efficitur libero tempor eget. Nam eu luctus risus. Integer pulvinar leo ac consequat viverra. Cras tincidunt justo eget augue porttitor, eget tempus mi vehicula. Fusce a aliquam lorem, laoreet dapibus nisl. Sed nec vulputate dui, nec placerat augue. Quisque blandit porttitor consequat. Vestibulum dapibus eget dolor nec ultricies. Curabitur venenatis dui ut porttitor dictum. Duis scelerisque nibh aliquet lacus interdum bibendum. Aliquam ipsum eros, posuere a augue ut, feugiat viverra augue. Etiam rutrum porta aliquam. Vivamus ut risus mattis lectus ultrices sollicitudin. Aenean eu dolor risus.",
+        "floor_area": 56,
+        "is_rented": true,
+        "location": {
+            "latitude": 36.7228671,
+            "longitude": -4.4279935
+        },
+        "monthly_price": 850,
+        "name": "San Pablo, 1",
+        "realtor": "JLopez",
+        "rooms": 3
+    },
+    "santamaria5": {
+        "date_added": "2020-01-02",
+        "description": "Phasellus laoreet turpis ut urna tincidunt, in blandit dolor sollicitudin. Praesent sapien nisl, facilisis ut bibendum vitae, molestie nec tortor. Phasellus fermentum, nisi sit amet commodo viverra, odio ligula condimentum justo, et ullamcorper nisi mauris id justo. Proin dignissim nulla id odio laoreet, sed ornare ante euismod. Sed facilisis pharetra justo, eget pharetra nunc sodales vel. Proin non purus vehicula, mattis erat non, vestibulum diam. Donec massa lacus, commodo in iaculis a, fringilla in ligula. Cras dignissim commodo rutrum. Aenean quis blandit orci.",
+        "floor_area": 70,
+        "is_rented": false,
+        "location": {
+            "latitude": 36.7210085,
+            "longitude": -4.420705
+        },
+        "monthly_price": 1300,
+        "name": "Santa María, 5",
+        "realtor": "JLopez",
+        "rooms": 4
+    },
+    "tirsodemolina19": {
+        "date_added": "2020-03-15",
+        "description": "Pellentesque blandit at mi non rhoncus. Cras elit sapien, blandit ac diam sit amet, consequat sagittis magna. Curabitur eu blandit sapien, id cursus eros. Vestibulum nec feugiat diam, et placerat nunc. Proin euismod in quam vel commodo. Nulla risus massa, laoreet eu ipsum sed, fringilla egestas turpis. Mauris iaculis lectus ante, quis lobortis felis fringilla ut. Cras at purus dignissim sapien tristique rhoncus id eu ante. Vivamus tellus ante, sodales ac velit ac, ultrices rutrum diam. Sed eu justo eros. Aenean eget suscipit dolor. Praesent nec lacinia enim, ac sollicitudin tellus.",
+        "floor_area": 75,
+        "is_rented": true,
+        "location": {
+            "latitude": 36.7277431,
+            "longitude": -4.4239933
+        },
+        "monthly_price": 1450,
+        "name": "Tirso de Molina, 19",
+        "realtor": "MRamos",
+        "rooms": 4
+    },
+    "trinidadgrund16": {
+        "date_added": "2020-05-15",
+        "description": "Aliquam erat volutpat. Quisque ac sem eget lacus facilisis pellentesque. Donec laoreet vitae libero sit amet laoreet. Nunc vestibulum finibus nunc, eget euismod mauris elementum at. Suspendisse nec accumsan ligula, eu laoreet risus. Pellentesque porta mauris nec quam elementum, id faucibus diam dignissim. Morbi laoreet aliquet cursus. Aenean elementum viverra volutpat. Aliquam tincidunt justo sit amet nunc auctor, dapibus viverra sem elementum. Proin libero nulla, sollicitudin sed suscipit in, accumsan sed magna. Ut ut nulla purus. In semper porta tellus ut tempor. Mauris vel lorem lacinia, gravida elit in, rutrum tellus. Nunc id volutpat neque. In hac habitasse platea dictumst. Maecenas viverra tincidunt augue, in efficitur felis lacinia non.",
+        "floor_area": 82,
+        "is_rented": false,
+        "location": {
+            "latitude": 36.7170284,
+            "longitude": -4.4225449
+        },
+        "monthly_price": 1550,
+        "name": "Trinidad Grund, 16",
+        "realtor": "MRamos",
+        "rooms": 4
+    },
+    "vendeja10": {
+        "date_added": "2020-02-20",
+        "description": "Duis non rhoncus risus. Fusce aliquam, mauris eget sagittis vestibulum, ante metus placerat erat, et consequat justo nunc in quam. Aliquam diam odio, lobortis eu elementum in, commodo a nibh. Pellentesque accumsan mollis sollicitudin. Nam id enim pellentesque risus vulputate molestie et quis mauris. Nunc at maximus magna, sed maximus dolor. Vivamus pharetra, tellus sed lacinia hendrerit, velit elit facilisis nulla, ac feugiat purus lectus in tellus. Integer id ornare nunc. Quisque porttitor convallis nisi, vel pharetra ex elementum non. Sed ut vulputate tellus, tempor tempor quam.",
+        "floor_area": 78,
+        "is_rented": false,
+        "location": {
+            "latitude": 36.7168123,
+            "longitude": -4.4217571
+        },
+        "monthly_price": 1250,
+        "name": "Vendeja, 10",
+        "realtor": "JLopez",
+        "rooms": 4
+    }
+}

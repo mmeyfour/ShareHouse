@@ -13,7 +13,9 @@
 		5071E3A22535F60000D2A119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5071E3A02535F60000D2A119 /* Main.storyboard */; };
 		5071E3A42535F60100D2A119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5071E3A32535F60100D2A119 /* Assets.xcassets */; };
 		5071E3A72535F60100D2A119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5071E3A52535F60100D2A119 /* LaunchScreen.storyboard */; };
-		5071E3B22535F71200D2A119 /* MalagaRentals.json in Resources */ = {isa = PBXBuildFile; fileRef = 5071E3B12535F71200D2A119 /* MalagaRentals.json */; };
+		5071E3B62535FAB100D2A119 /* Houses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5071E3B52535FAB100D2A119 /* Houses.swift */; };
+		5071E3C12535FE6200D2A119 /* HouseList.json in Resources */ = {isa = PBXBuildFile; fileRef = 5071E3C02535FE6200D2A119 /* HouseList.json */; };
+		5071E3C42535FE7200D2A119 /* HouseDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 5071E3C32535FE7200D2A119 /* HouseDetails.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +27,9 @@
 		5071E3A32535F60100D2A119 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5071E3A62535F60100D2A119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5071E3A82535F60100D2A119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5071E3B12535F71200D2A119 /* MalagaRentals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MalagaRentals.json; path = ../../../../../../Downloads/pokemon/MalagaRentals.json; sourceTree = "<group>"; };
+		5071E3B52535FAB100D2A119 /* Houses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Houses.swift; sourceTree = "<group>"; };
+		5071E3C02535FE6200D2A119 /* HouseList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HouseList.json; sourceTree = "<group>"; };
+		5071E3C32535FE7200D2A119 /* HouseDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HouseDetails.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		5071E3AF2535F6CA00D2A119 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5071E3B52535FAB100D2A119 /* Houses.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -81,7 +86,8 @@
 		5071E3B02535F6CF00D2A119 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
-				5071E3B12535F71200D2A119 /* MalagaRentals.json */,
+				5071E3C02535FE6200D2A119 /* HouseList.json */,
+				5071E3C32535FE7200D2A119 /* HouseDetails.json */,
 			);
 			path = Sample;
 			sourceTree = "<group>";
@@ -143,9 +149,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5071E3B22535F71200D2A119 /* MalagaRentals.json in Resources */,
 				5071E3A72535F60100D2A119 /* LaunchScreen.storyboard in Resources */,
+				5071E3C42535FE7200D2A119 /* HouseDetails.json in Resources */,
 				5071E3A42535F60100D2A119 /* Assets.xcassets in Resources */,
+				5071E3C12535FE6200D2A119 /* HouseList.json in Resources */,
 				5071E3A22535F60000D2A119 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +166,7 @@
 			files = (
 				5071E39F2535F60000D2A119 /* ViewController.swift in Sources */,
 				5071E39B2535F60000D2A119 /* AppDelegate.swift in Sources */,
+				5071E3B62535FAB100D2A119 /* Houses.swift in Sources */,
 				5071E39D2535F60000D2A119 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
