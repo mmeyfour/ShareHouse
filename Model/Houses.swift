@@ -25,4 +25,10 @@ struct HouseList: Codable {
 struct HouseSummaryViewModel {
     let image: UIImage
     let name: String
+    let realtor : String
+    let monthlyPrice :Int
+    let rooms : Int
+    let floorArea: Int
+    let description: String
+    let dateAdded: Date
 }

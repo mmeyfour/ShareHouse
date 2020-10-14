@@ -40,7 +40,7 @@ class HouseListDataSource: NSObject {
             print("\(key): \(value)")
         }
         let houses = malagaRentalList.map {(key, house)  in
-            HouseSummaryViewModel(image: UIImage.mainImage(houseId: "1"), name: house.name)
+            HouseSummaryViewModel(image: UIImage.mainImage(houseId: "1"), name: house.name, realtor: house.realtor, monthlyPrice: house.monthlyPrice, rooms: house.rooms, floorArea: house.floorArea, description: house.description, dateAdded: house.dateAdded)
         }
         return houses
     }

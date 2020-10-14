@@ -18,36 +18,15 @@ class HouseListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupTableView()
-        mapKit.isHidden = true
-        segmentController.setTitle("Lista", forSegmentAt: 0)
-        segmentController.setTitle("Mapa", forSegmentAt: 1)
-        // Istan
-        let initialLocation = CLLocation(latitude: 36.5783, longitude: -4.9499)
-        mapKit.centerToLocation(initialLocation)
+        setupMapKit()
         
-        // Limitar la cam
-        let istanCenter = CLLocation(latitude: 36.5783, longitude: -4.9499)
-            let region = MKCoordinateRegion(
-              center: istanCenter.coordinate,
-              latitudinalMeters: 50000,
-              longitudinalMeters: 60000)
-            mapKit.setCameraBoundary(
-              MKMapView.CameraBoundary(coordinateRegion: region),
-              animated: true)
-            
-            let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 200000)
-            mapKit.setCameraZoomRange(zoomRange, animated: true)
-        let artwork = MapPoint(
-          title: "Pakistan",
-          locationName: "los jarales",
-          discipline: "Hotel",
-          coordinate: CLLocationCoordinate2D(latitude: 36.5783, longitude: -4.9499))
-        mapKit.addAnnotation(artwork)
+        for house in houseListDataSource.houses {
+            print(house)
+            print("-----------------------------------")
+        }
         
-        print("---------------------------------------------")
-        print(houseListDataSource.houses)
-        print("---------------------------------------------")
     }
     
     func setupTableView() {
@@ -57,7 +36,39 @@ class HouseListViewController: UIViewController {
         tableView.register(nib, forCellReuseIdentifier: identifier)
         tableView.dataSource = houseListDataSource
         
+        mapKit.isHidden = true
+        segmentController.setTitle("Lista", forSegmentAt: 0)
+        segmentController.setTitle("Mapa", forSegmentAt: 1)
+        
     }
+    
+    func setupMapKit() {
+        // Istan
+        let initialLocation = CLLocation(latitude: 36.5783, longitude: -4.9499)
+        mapKit.centerToLocation(initialLocation)
+        
+        // Limitar la cam
+        let istanCenter = CLLocation(latitude: 36.5783, longitude: -4.9499)
+        let region = MKCoordinateRegion(
+            center: istanCenter.coordinate,
+            latitudinalMeters: 50000,
+            longitudinalMeters: 60000)
+        mapKit.setCameraBoundary(
+            MKMapView.CameraBoundary(coordinateRegion: region),
+            animated: true)
+        
+        let zoomRange = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 200000)
+        mapKit.setCameraZoomRange(zoomRange, animated: true)
+        
+        // istan point
+        let istanPoint = MapPoint(
+            title: "Pakistan",
+            locationName: "los jarales",
+            discipline: "Hotel",
+            coordinate: CLLocationCoordinate2D(latitude: 36.5783, longitude: -4.9499))
+        mapKit.addAnnotation(istanPoint)
+    }
+    
     @IBAction func didChangeTheSegment(_ sender: UISegmentedControl) {
         if segmentController.selectedSegmentIndex == 0 {
             tableView.isHidden = false
@@ -73,18 +84,17 @@ class HouseListViewController: UIViewController {
 }
 
 private extension MKMapView {
-  func centerToLocation(
-    _ location: CLLocation,
-    regionRadius: CLLocationDistance = 1000
-  ) {
-    let coordinateRegion = MKCoordinateRegion(
-      center: location.coordinate,
-      latitudinalMeters: regionRadius,
-      longitudinalMeters: regionRadius)
-    setRegion(coordinateRegion, animated: true)
-  }
+    func centerToLocation(
+        _ location: CLLocation,
+        regionRadius: CLLocationDistance = 1000
+    ) {
+        let coordinateRegion = MKCoordinateRegion(
+            center: location.coordinate,
+            latitudinalMeters: regionRadius,
+            longitudinalMeters: regionRadius)
+        setRegion(coordinateRegion, animated: true)
+    }
 }
-
 
 //class ViewController: UIViewController {
 ////    override func viewDidLoad() {
