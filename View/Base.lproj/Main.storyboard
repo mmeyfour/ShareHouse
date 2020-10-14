@@ -36,14 +36,21 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VP3-8v-ggo">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="N4G-KV-JTi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Z5Q-8U-gRW" firstAttribute="bottom" secondItem="N4G-KV-JTi" secondAttribute="bottom" id="2nG-f9-n4d"/>
                             <constraint firstItem="N4G-KV-JTi" firstAttribute="trailing" secondItem="Z5Q-8U-gRW" secondAttribute="trailing" id="G5U-rt-P33"/>
+                            <constraint firstItem="VP3-8v-ggo" firstAttribute="leading" secondItem="N4G-KV-JTi" secondAttribute="leading" id="NAk-9T-DQw"/>
+                            <constraint firstItem="N4G-KV-JTi" firstAttribute="bottom" secondItem="VP3-8v-ggo" secondAttribute="bottom" id="Osa-pl-QSQ"/>
                             <constraint firstItem="Z5Q-8U-gRW" firstAttribute="leading" secondItem="N4G-KV-JTi" secondAttribute="leading" id="Pfq-PA-eXK"/>
+                            <constraint firstItem="N4G-KV-JTi" firstAttribute="trailing" secondItem="VP3-8v-ggo" secondAttribute="trailing" id="Sdc-Q1-5OP"/>
                             <constraint firstItem="Z5Q-8U-gRW" firstAttribute="top" secondItem="N4G-KV-JTi" secondAttribute="top" id="VSs-e4-4Ke"/>
+                            <constraint firstItem="N4G-KV-JTi" firstAttribute="top" secondItem="VP3-8v-ggo" secondAttribute="top" id="jhZ-PX-r29"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3AM-1b-KBv">
@@ -61,6 +68,7 @@
                         </segmentedControl>
                     </navigationItem>
                     <connections>
+                        <outlet property="mapKit" destination="VP3-8v-ggo" id="GEI-Eh-TpH"/>
                         <outlet property="segmentController" destination="UqD-MP-YjN" id="qYO-P8-rPk"/>
                         <outlet property="tableView" destination="Z5Q-8U-gRW" id="AYh-GK-fob"/>
                     </connections>

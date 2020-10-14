@@ -16,6 +16,7 @@ class HouseTableViewCell: UITableViewCell {
     @IBOutlet weak var houseImage: UIImageView!
     @IBOutlet weak var houseDirection: UILabel!
     
+    
     func configure(houseSummary: HouseSummaryViewModel) {
         houseDirection.text = houseSummary.name
         houseImage.image = houseSummary.image
