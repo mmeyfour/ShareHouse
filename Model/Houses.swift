@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
-struct RentalDetail: Codable {
+struct HouseDetail: Codable {
   let realtor : String
   let monthlyPrice :Int
   let name : String
@@ -16,6 +17,12 @@ struct RentalDetail: Codable {
   let description: String
   let dateAdded: Date
 }
-struct MalagaList: Codable {
-  var dictionaryRentalList : [String:RentalDetail] = [:]
+
+struct HouseList: Codable {
+  var dictionaryRentalList : [String : HouseDetail] = [:]
+}
+
+struct HouseSummaryViewModel {
+    let image: UIImage
+    let name: String
 }
