@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="343" height="125"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TyK-Rk-N5K">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house" translatesAutoresizingMaskIntoConstraints="NO" id="TyK-Rk-N5K">
                         <rect key="frame" x="16" y="16" width="96" height="96"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="96" id="aiz-aP-H2f"/>
@@ -66,4 +66,7 @@
             <point key="canvasLocation" x="128.2608695652174" y="125.55803571428571"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="house" width="200" height="200"/>
+    </resources>
 </document>

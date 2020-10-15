@@ -23,6 +23,6 @@ extension UIImage{
 //    Esto es temporal
     static func mainImage(houseId: String?) -> UIImage {
         
-        return UIImage(named: "0")!
+        return UIImage(named: "house")!
     }
 }
