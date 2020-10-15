@@ -15,6 +15,10 @@
 		5016D9112537973900710F9A /* MapPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016D9102537973900710F9A /* MapPoint.swift */; };
 		5016D92B2538946D00710F9A /* HouseImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016D9292538946D00710F9A /* HouseImageTableViewCell.swift */; };
 		5016D92C2538946D00710F9A /* HouseImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5016D92A2538946D00710F9A /* HouseImageTableViewCell.xib */; };
+		5016D9302538990300710F9A /* HouseDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016D92E2538990300710F9A /* HouseDetailsTableViewCell.swift */; };
+		5016D9312538990300710F9A /* HouseDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5016D92F2538990300710F9A /* HouseDetailsTableViewCell.xib */; };
+		5016D93525389EF100710F9A /* HouseDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016D93325389EF100710F9A /* HouseDescriptionTableViewCell.swift */; };
+		5016D93625389EF100710F9A /* HouseDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5016D93425389EF100710F9A /* HouseDescriptionTableViewCell.xib */; };
 		5071E39B2535F60000D2A119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5071E39A2535F60000D2A119 /* AppDelegate.swift */; };
 		5071E39D2535F60000D2A119 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5071E39C2535F60000D2A119 /* SceneDelegate.swift */; };
 		5071E3A22535F60000D2A119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5071E3A02535F60000D2A119 /* Main.storyboard */; };
@@ -34,6 +38,10 @@
 		5016D9102537973900710F9A /* MapPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPoint.swift; sourceTree = "<group>"; };
 		5016D9292538946D00710F9A /* HouseImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseImageTableViewCell.swift; sourceTree = "<group>"; };
 		5016D92A2538946D00710F9A /* HouseImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseImageTableViewCell.xib; sourceTree = "<group>"; };
+		5016D92E2538990300710F9A /* HouseDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		5016D92F2538990300710F9A /* HouseDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		5016D93325389EF100710F9A /* HouseDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		5016D93425389EF100710F9A /* HouseDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseDescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		5071E3972535F60000D2A119 /* ShareHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5071E39A2535F60000D2A119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5071E39C2535F60000D2A119 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +73,10 @@
 				5016D8F925371B5300710F9A /* HouseTableViewCell.xib */,
 				5016D9292538946D00710F9A /* HouseImageTableViewCell.swift */,
 				5016D92A2538946D00710F9A /* HouseImageTableViewCell.xib */,
+				5016D92E2538990300710F9A /* HouseDetailsTableViewCell.swift */,
+				5016D92F2538990300710F9A /* HouseDetailsTableViewCell.xib */,
+				5016D93325389EF100710F9A /* HouseDescriptionTableViewCell.swift */,
+				5016D93425389EF100710F9A /* HouseDescriptionTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,8 +201,10 @@
 				5016D8FB25371B5300710F9A /* HouseTableViewCell.xib in Resources */,
 				5071E3A72535F60100D2A119 /* LaunchScreen.storyboard in Resources */,
 				5071E3C42535FE7200D2A119 /* HouseDetails.json in Resources */,
+				5016D9312538990300710F9A /* HouseDetailsTableViewCell.xib in Resources */,
 				5071E3A42535F60100D2A119 /* Assets.xcassets in Resources */,
 				5016D92C2538946D00710F9A /* HouseImageTableViewCell.xib in Resources */,
+				5016D93625389EF100710F9A /* HouseDescriptionTableViewCell.xib in Resources */,
 				5071E3C12535FE6200D2A119 /* HouseList.json in Resources */,
 				5071E3A22535F60000D2A119 /* Main.storyboard in Resources */,
 			);
@@ -210,8 +224,10 @@
 				5071E39D2535F60000D2A119 /* SceneDelegate.swift in Sources */,
 				5016D90825371EEB00710F9A /* HouseListDataSource.swift in Sources */,
 				5016D8FA25371B5300710F9A /* HouseTableViewCell.swift in Sources */,
+				5016D9302538990300710F9A /* HouseDetailsTableViewCell.swift in Sources */,
 				5016D90525371D2600710F9A /* HouseListViewController.swift in Sources */,
 				5016D92B2538946D00710F9A /* HouseImageTableViewCell.swift in Sources */,
+				5016D93525389EF100710F9A /* HouseDescriptionTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

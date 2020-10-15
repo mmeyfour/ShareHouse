@@ -10,6 +10,7 @@ import UIKit
 class HouseImageTableViewCell: UITableViewCell {
     
     static let identifier = "HouseImageTableViewCell"
+    
     @IBOutlet weak var houseImageView: UIImageView!
     
     func configure(with image: UIImage) {
