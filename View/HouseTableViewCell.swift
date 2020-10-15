@@ -13,14 +13,16 @@ class HouseTableViewCell: UITableViewCell {
     static let identifier = "HouseTableViewCell"
     
     //    MARK: Outlets
-    @IBOutlet weak var houseImage: UIImageView!
-    @IBOutlet weak var houseDirection: UILabel!
+    @IBOutlet weak var houseImageView: UIImageView!
+    @IBOutlet weak var houseDirectionTextLabel: UILabel!
+    @IBOutlet weak var housePriceTextLabel: UILabel!
+    @IBOutlet weak var houseAreaTextLabel: UILabel!
     
     // nuevo
     func configure(houseSummary: HouseSummaryViewModel) {
-        houseDirection.text = houseSummary.name
-        houseImage.image = houseSummary.image
+        houseDirectionTextLabel.text = houseSummary.name
+        houseImageView.image = houseSummary.image
+        housePriceTextLabel.text = "\(houseSummary.monthlyPrice) €/month"
+        houseAreaTextLabel.text = "\(houseSummary.floorArea) m^2, \(houseSummary.rooms)rooms"
     }
-
-    
 }

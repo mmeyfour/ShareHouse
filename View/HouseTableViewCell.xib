@@ -58,8 +58,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="houseDirection" destination="J0v-eS-3SG" id="EbD-v1-1lP"/>
-                <outlet property="houseImage" destination="TyK-Rk-N5K" id="3Iq-TR-Ppm"/>
+                <outlet property="houseAreaTextLabel" destination="8iY-Tn-oD8" id="M29-O5-MRo"/>
+                <outlet property="houseDirectionTextLabel" destination="J0v-eS-3SG" id="RK2-qY-aQK"/>
+                <outlet property="houseImageView" destination="TyK-Rk-N5K" id="TOr-d1-Wp6"/>
+                <outlet property="housePriceTextLabel" destination="ly1-U0-NKE" id="9x2-0r-mxk"/>
             </connections>
             <point key="canvasLocation" x="128.2608695652174" y="125.55803571428571"/>
         </tableViewCell>
