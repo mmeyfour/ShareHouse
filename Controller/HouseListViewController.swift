@@ -23,10 +23,23 @@ class HouseListViewController: UIViewController {
         setupMapKit()
         
         for house in houseListDataSource.houses {
-            print(house)
+            print(house.name)
+            print(house.dateAdded)
+            print(house.description)
+            print(house.floorArea)
+            print(house.image)
+            print(house.location)
+            print(house.monthlyPrice)
+            print(house.realtor)
+            print(house.rooms)
             print("-----------------------------------")
+            let Point = MapPoint(
+                title: "\(house.realtor)",
+                locationName: "\(house.name)",
+                discipline: "House",
+                coordinate: CLLocationCoordinate2D(latitude: house.location.latitude, longitude: house.location.longitude))
+            mapKit.addAnnotation(Point)
         }
-        
     }
     
     func setupTableView() {
@@ -39,20 +52,19 @@ class HouseListViewController: UIViewController {
         mapKit.isHidden = true
         segmentController.setTitle("Lista", forSegmentAt: 0)
         segmentController.setTitle("Mapa", forSegmentAt: 1)
-        
     }
     
     func setupMapKit() {
-        // Istan
-        let initialLocation = CLLocation(latitude: 36.5783, longitude: -4.9499)
+        // Initial Point
+        let initialLocation = CLLocation(latitude: 36.718858, longitude: -4.4239175)
         mapKit.centerToLocation(initialLocation)
         
-        // Limitar la cam
-        let istanCenter = CLLocation(latitude: 36.5783, longitude: -4.9499)
+        // Map View
+        let pointCenter = CLLocation(latitude: 36.718858, longitude: -4.4239175)
         let region = MKCoordinateRegion(
-            center: istanCenter.coordinate,
-            latitudinalMeters: 50000,
-            longitudinalMeters: 60000)
+            center: pointCenter.coordinate,
+            latitudinalMeters: 5000,
+            longitudinalMeters: 6000)
         mapKit.setCameraBoundary(
             MKMapView.CameraBoundary(coordinateRegion: region),
             animated: true)
