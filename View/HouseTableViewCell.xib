@@ -46,6 +46,13 @@
                             </label>
                         </subviews>
                     </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rented" translatesAutoresizingMaskIntoConstraints="NO" id="WHU-dX-w1C">
+                        <rect key="frame" x="16" y="16" width="96" height="96"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="96" id="kwy-T0-tsR"/>
+                            <constraint firstAttribute="height" constant="96" id="yKY-4A-BZx"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="TyK-Rk-N5K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="0ua-AO-JN5"/>
@@ -57,16 +64,24 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <constraints>
+                <constraint firstItem="WHU-dX-w1C" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" constant="16" id="8Td-Rd-LHU"/>
+                <constraint firstItem="TyK-Rk-N5K" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" constant="16" id="A0e-zy-Kkc"/>
+                <constraint firstItem="TyK-Rk-N5K" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" constant="16" id="aTf-Fl-wIM"/>
+                <constraint firstItem="WHU-dX-w1C" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" constant="16" id="p26-du-Gkl"/>
+            </constraints>
             <connections>
                 <outlet property="houseAreaTextLabel" destination="8iY-Tn-oD8" id="M29-O5-MRo"/>
                 <outlet property="houseDirectionTextLabel" destination="J0v-eS-3SG" id="RK2-qY-aQK"/>
                 <outlet property="houseImageView" destination="TyK-Rk-N5K" id="TOr-d1-Wp6"/>
                 <outlet property="housePriceTextLabel" destination="ly1-U0-NKE" id="9x2-0r-mxk"/>
+                <outlet property="houseRentedImageView" destination="WHU-dX-w1C" id="w9y-xE-ORY"/>
             </connections>
             <point key="canvasLocation" x="128.2608695652174" y="125.55803571428571"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="house" width="200" height="200"/>
+        <image name="rented" width="60" height="52"/>
     </resources>
 </document>

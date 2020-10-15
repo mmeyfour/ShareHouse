@@ -17,6 +17,7 @@ class HouseTableViewCell: UITableViewCell {
     @IBOutlet weak var houseDirectionTextLabel: UILabel!
     @IBOutlet weak var housePriceTextLabel: UILabel!
     @IBOutlet weak var houseAreaTextLabel: UILabel!
+    @IBOutlet weak var houseRentedImageView: UIImageView!
     
     // nuevo
     func configure(houseSummary: HouseSummaryViewModel) {
@@ -24,5 +25,6 @@ class HouseTableViewCell: UITableViewCell {
         houseImageView.image = houseSummary.image
         housePriceTextLabel.text = "\(houseSummary.monthlyPrice) €/month"
         houseAreaTextLabel.text = "\(houseSummary.floorArea) m^2, \(houseSummary.rooms)rooms"
+        houseSummary.isRented ? (houseRentedImageView.isHidden = false) : (houseRentedImageView.isHidden = true)
     }
 }
