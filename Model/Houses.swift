@@ -22,6 +22,7 @@ struct HouseDetail: Codable {
     let description: String
     let dateAdded: Date
     let location: Coordinate
+    let isRented: Bool
     
 }
 
@@ -39,4 +40,5 @@ struct HouseSummaryViewModel {
     let description: String
     let dateAdded: Date
     let location: Coordinate
+    let isRented: Bool
 }

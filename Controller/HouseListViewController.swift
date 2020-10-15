@@ -32,6 +32,7 @@ class HouseListViewController: UIViewController {
             print(house.monthlyPrice)
             print(house.realtor)
             print(house.rooms)
+            print(house.isRented)
             print("-----------------------------------")
             let Point = MapPoint(
                 title: "\(house.realtor)",
