@@ -8,18 +8,25 @@
 import Foundation
 import UIKit
 
+struct Coordinate: Codable {
+    let latitude : Double
+    let longitude : Double
+}
+
 struct HouseDetail: Codable {
-  let realtor : String
-  let monthlyPrice :Int
-  let name : String
-  let rooms : Int
-  let floorArea: Int
-  let description: String
-  let dateAdded: Date
+    let realtor : String
+    let monthlyPrice :Int
+    let name : String
+    let rooms : Int
+    let floorArea: Int
+    let description: String
+    let dateAdded: Date
+    let location: Coordinate
+    
 }
 
 struct HouseList: Codable {
-  var dictionaryRentalList : [String : HouseDetail] = [:]
+    var dictionaryRentalList : [String : HouseDetail] = [:]
 }
 
 struct HouseSummaryViewModel {
@@ -31,4 +38,5 @@ struct HouseSummaryViewModel {
     let floorArea: Int
     let description: String
     let dateAdded: Date
+    let location: Coordinate
 }
