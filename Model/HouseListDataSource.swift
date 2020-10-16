@@ -11,32 +11,9 @@ import UIKit
 class HouseListDataSource: NSObject {
     let houses: [HouseSummaryViewModel]
     
-    override init(){
-        houses = HouseListDataSource.getHouse()
+    init(houses: [HouseSummaryViewModel]) {
+        self.houses = houses
         super.init()
-    }
-    
-    static func getHouse() -> [HouseSummaryViewModel] {
-        guard let url = Bundle.main.url(forResource: "HouseList", withExtension: "json"),
-              let data = try? Data(contentsOf: url) else {
-            return []
-        }
-        
-        let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "yyyy-MM-dd"
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        decoder.dateDecodingStrategy = .formatted(dateFormatterGet)
-        let malagaRentalList = try! decoder.decode([String:HouseDetail].self, from: data)
-        let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "dd MMMM yyyy"
-//        for (key, value) in malagaRentalList {
-//            print("\(key): \(value)")
-//        }
-        let houses = malagaRentalList.map {(key, house)  in
-            HouseSummaryViewModel(image: UIImage.mainImage(houseId: "house"), name: house.name, realtor: house.realtor, monthlyPrice: house.monthlyPrice, rooms: house.rooms, floorArea: house.floorArea, description: house.description, dateAdded: house.dateAdded, location: house.location, isRented: house.isRented)
-        }
-        return houses
     }
 }
 

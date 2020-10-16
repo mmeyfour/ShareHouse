@@ -9,6 +9,6 @@ import Foundation
 
 struct HouseAPI {
     static var baseURL = URL(string: "https://backend01-c7196.firebaseio.com/")!
-    static var houseURL = HouseAPI.baseURL.appendingPathComponent("rental_list")
+    static var houseURL = HouseAPI.baseURL.appendingPathComponent("rental_list.json")
 }
 

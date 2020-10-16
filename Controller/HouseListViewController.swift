@@ -9,8 +9,8 @@ import UIKit
 import MapKit
 
 class HouseListViewController: UIViewController {
-    
-    let houseListDataSource = HouseListDataSource()
+    lazy var networkController = NetworkController(session: URLSession(configuration: .default), houseListDelegate: self)
+    var houseListDataSource: HouseListDataSource?
     
     @IBOutlet weak var mapKit: MKMapView!
     @IBOutlet weak var segmentController: UISegmentedControl!
@@ -19,42 +19,85 @@ class HouseListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(1)
+        setupView()
         setupTableView()
         setupMapKit()
+        networkController.fetchHouseList()
         
-        for house in houseListDataSource.houses {
-            print(house.name)
-            print(house.dateAdded)
-            print(house.description)
-            print(house.floorArea)
-            print(house.image)
-            print(house.location)
-            print(house.monthlyPrice)
-            print(house.realtor)
-            print(house.rooms)
-            print(house.isRented)
-            print("-----------------------------------")
-            let Point = MapPoint(
-                title: "\(house.realtor)",
-                locationName: "\(house.name)",
-                discipline: "House",
-                coordinate: CLLocationCoordinate2D(latitude: house.location.latitude, longitude: house.location.longitude))
-            mapKit.addAnnotation(Point)
-        }
+//        for house in houseListDataSource!.houses {
+//            print(house.name)
+//            print(house.dateAdded)
+//            print(house.description)
+//            print(house.floorArea)
+//            print(house.image)
+//            print(house.location)
+//            print(house.monthlyPrice)
+//            print(house.realtor)
+//            print(house.rooms)
+//            print(house.isRented)
+//            print("-----------------------------------")
+//            let Point = MapPoint(
+//                title: "\(house.realtor)",
+//                locationName: "\(house.name)",
+//                discipline: "House",
+//                coordinate: CLLocationCoordinate2D(latitude: house.location.latitude, longitude: house.location.longitude))
+//            mapKit.addAnnotation(Point)
+//        }
     }
     
-    func setupTableView() {
-        
-        let identifier = HouseTableViewCell.identifier
-        let nib = UINib(nibName: identifier, bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: identifier)
-        tableView.dataSource = houseListDataSource
-        
-        tableView.delegate = self
-        
+    func setupView() {
+        print(2)
         mapKit.isHidden = true
         segmentController.setTitle("Lista", forSegmentAt: 0)
         segmentController.setTitle("Mapa", forSegmentAt: 1)
+    }
+    
+    func  setupTableView() {
+        print(3)
+        // 1. Register cell types
+        let identifier = HouseTableViewCell.identifier
+        let nib = UINib(nibName: identifier, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: identifier)
+    
+        // 2. Connect delegate
+        tableView.delegate = self
+    }
+    //class PokemonListViewController: UIViewController {
+    //    @IBOutlet weak var tableView: UITableView!
+    //
+    //    lazy var networkController = NetworkController(session: URLSession(configuration: .default), pokemonListDelegate: self)
+    //    var pokemonListDataSource: PokemonListDataSource?
+    //
+    //    override func viewDidLoad() {
+    //        super.viewDidLoad()
+    //        setupTableView()
+    //        networkController.fetchPokemonList()
+    //    }
+    //
+    //    func  setupTableView() {
+    //        // 1. Register cell types
+    //        let identifier = PokemonTableViewCell.identifier
+    //        let nib = UINib(nibName: identifier, bundle: nil)
+    //        tableView.register(nib, forCellReuseIdentifier: identifier)
+    //
+    //        // 2. Connect delegate
+    //        tableView.delegate = self
+    //    }
+    //}
+
+    
+    @IBAction func didChangeTheSegment(_ sender: UISegmentedControl) {
+        if segmentController.selectedSegmentIndex == 0 {
+            tableView.isHidden = false
+            mapKit.isHidden = true
+        }else if segmentController.selectedSegmentIndex == 1 {
+            tableView.isHidden = true
+            mapKit.isHidden = false
+        }else{
+            tableView.isHidden = true
+            mapKit.isHidden = false
+        }
     }
     
     func setupMapKit() {
@@ -83,19 +126,6 @@ class HouseListViewController: UIViewController {
             coordinate: CLLocationCoordinate2D(latitude: 36.5783, longitude: -4.9499))
         mapKit.addAnnotation(istanPoint)
     }
-    
-    @IBAction func didChangeTheSegment(_ sender: UISegmentedControl) {
-        if segmentController.selectedSegmentIndex == 0 {
-            tableView.isHidden = false
-            mapKit.isHidden = true
-        }else if segmentController.selectedSegmentIndex == 1 {
-            tableView.isHidden = true
-            mapKit.isHidden = false
-        }else{
-            tableView.isHidden = true
-            mapKit.isHidden = false
-        }
-    }
 }
 
 private extension MKMapView {
@@ -118,49 +148,15 @@ extension HouseListViewController: UITableViewDelegate {
     }
 }
 
-//class ViewController: UIViewController {
-////    override func viewDidLoad() {
-//        super.viewDidLoad()
-////        loadSampleRentalDetail()
-////        loadMalagaRentalList()
-//        // Do any additional setup after loading the view.
-//    }
-//    func loadSampleRentalDetail() {
-//        guard let url = Bundle.main.url(forResource: "HouseDetails", withExtension: "json"),
-//              let data = try? Data(contentsOf: url) else {
-//            return
-//        }
-//        let dateFormatterGet = DateFormatter()
-//        dateFormatterGet.dateFormat = "yyyy-MM-dd"
-//        let decoder = JSONDecoder()
-//        decoder.keyDecodingStrategy = .convertFromSnakeCase
-//        decoder.dateDecodingStrategy = .formatted(dateFormatterGet)
-//        guard let rentalDetail = try? decoder.decode(HouseDetail.self, from: data) else {
-//            return
-//        }
-//        let dateFormatterPrint = DateFormatter()
-//        dateFormatterPrint.dateFormat = "dd MMMM yyyy"
-////        print("El propietario \(rentalDetail.realtor) a fecha de \(dateFormatterPrint.string(from: rentalDetail.dateAdded)) alquila el apartamento en \(rentalDetail.name) con \(rentalDetail.floorArea) m^2 al precio de \(rentalDetail.monthlyPrice) €/mes")
-//    }
-//
-//    func loadMalagaRentalList() {
-//        guard let url = Bundle.main.url(forResource: "HouseList", withExtension: "json"),
-//              let data = try? Data(contentsOf: url) else {
-//            return
-//        }
-//        let dateFormatterGet = DateFormatter()
-//        dateFormatterGet.dateFormat = "yyyy-MM-dd"
-//        let decoder = JSONDecoder()
-//        decoder.keyDecodingStrategy = .convertFromSnakeCase
-//        decoder.dateDecodingStrategy = .formatted(dateFormatterGet)
-//        let malagaRentalList = try! decoder.decode([String:HouseDetail].self, from: data)
-//        let dateFormatterPrint = DateFormatter()
-//        dateFormatterPrint.dateFormat = "dd MMMM yyyy"
-//        for (key,value) in malagaRentalList {
-////            print("Esta es la calle \(key) con \(value)")
-//            print(key)
-//            print(value)
-//        }
-//    }
-//}
+extension HouseListViewController: HouseListDelegate {
+    
+    func didFetch(houses: [HouseSummaryViewModel]) {
+        
+        houseListDataSource = HouseListDataSource(houses: houses)
+        tableView.dataSource = houseListDataSource
+        tableView.reloadData()
+    }
+}
+
+
 

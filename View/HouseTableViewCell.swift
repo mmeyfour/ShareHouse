@@ -19,6 +19,7 @@ class HouseTableViewCell: UITableViewCell {
     @IBOutlet weak var houseAreaTextLabel: UILabel!
     @IBOutlet weak var houseRentedImageView: UIImageView!
     
+
     // nuevo
     func configure(houseSummary: HouseSummaryViewModel) {
         houseDirectionTextLabel.text = houseSummary.name
