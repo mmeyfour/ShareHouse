@@ -16,7 +16,26 @@ class HouseDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
 
         print(houseDetailDataSource.houseName)
+    }
+    
+    func  setupTableView() {
+        // 1. Register cell types
+        let identifiers = [HouseDetailsTableViewCell.identifier, HouseImageTableViewCell.identifier, HouseDescriptionTableViewCell.identifier]
+        for identifier in identifiers {
+            let nib = UINib(nibName: identifier, bundle: nil)
+            tableView.register(nib, forCellReuseIdentifier: identifier)
+        }
+        
+        // 2. Connect data source
+        tableView.dataSource = houseDetailDataSource
+        
+        // 3. Disable separator
+        tableView.separatorStyle = .none
+        
+        // 4. Connect delegate
+       
     }
 }
