@@ -13,6 +13,7 @@ class HouseDetailViewController: UIViewController {
     
 //    let houseDetailDataSource = HouseDetailDataSource()
     static let segueIdentifier = "ShowHouseDetail"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

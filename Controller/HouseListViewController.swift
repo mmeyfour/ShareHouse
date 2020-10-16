@@ -50,6 +50,8 @@ class HouseListViewController: UIViewController {
         tableView.register(nib, forCellReuseIdentifier: identifier)
         tableView.dataSource = houseListDataSource
         
+        tableView.delegate = self
+        
         mapKit.isHidden = true
         segmentController.setTitle("Lista", forSegmentAt: 0)
         segmentController.setTitle("Mapa", forSegmentAt: 1)
@@ -106,6 +108,13 @@ private extension MKMapView {
             latitudinalMeters: regionRadius,
             longitudinalMeters: regionRadius)
         setRegion(coordinateRegion, animated: true)
+    }
+}
+
+extension HouseListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("hola!!")
+        performSegue(withIdentifier: HouseDetailViewController.segueIdentifier, sender: nil)
     }
 }
 
