@@ -19,6 +19,7 @@
 		5016D9312538990300710F9A /* HouseDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5016D92F2538990300710F9A /* HouseDetailsTableViewCell.xib */; };
 		5016D93525389EF100710F9A /* HouseDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016D93325389EF100710F9A /* HouseDescriptionTableViewCell.swift */; };
 		5016D93625389EF100710F9A /* HouseDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5016D93425389EF100710F9A /* HouseDescriptionTableViewCell.xib */; };
+		5016D945253979B100710F9A /* HouseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016D944253979B100710F9A /* HouseDetailViewController.swift */; };
 		5071E39B2535F60000D2A119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5071E39A2535F60000D2A119 /* AppDelegate.swift */; };
 		5071E39D2535F60000D2A119 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5071E39C2535F60000D2A119 /* SceneDelegate.swift */; };
 		5071E3A22535F60000D2A119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5071E3A02535F60000D2A119 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		5016D92F2538990300710F9A /* HouseDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		5016D93325389EF100710F9A /* HouseDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		5016D93425389EF100710F9A /* HouseDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseDescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		5016D944253979B100710F9A /* HouseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailViewController.swift; sourceTree = "<group>"; };
 		5071E3972535F60000D2A119 /* ShareHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5071E39A2535F60000D2A119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5071E39C2535F60000D2A119 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				5016D90425371D2600710F9A /* HouseListViewController.swift */,
+				5016D944253979B100710F9A /* HouseDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				5016D9112537973900710F9A /* MapPoint.swift in Sources */,
 				5071E39B2535F60000D2A119 /* AppDelegate.swift in Sources */,
 				5071E3B62535FAB100D2A119 /* Houses.swift in Sources */,
+				5016D945253979B100710F9A /* HouseDetailViewController.swift in Sources */,
 				5071E39D2535F60000D2A119 /* SceneDelegate.swift in Sources */,
 				5016D90825371EEB00710F9A /* HouseListDataSource.swift in Sources */,
 				5016D8FA25371B5300710F9A /* HouseTableViewCell.swift in Sources */,
