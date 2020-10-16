@@ -23,6 +23,7 @@
 		5016D94825397E4E00710F9A /* HouseDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016D94725397E4E00710F9A /* HouseDetailDataSource.swift */; };
 		5016D94C2539929D00710F9A /* IsRentedButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016D94A2539929D00710F9A /* IsRentedButtonTableViewCell.swift */; };
 		5016D94D2539929D00710F9A /* IsRentedButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5016D94B2539929D00710F9A /* IsRentedButtonTableViewCell.xib */; };
+		5016D9512539B22E00710F9A /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016D9502539B22E00710F9A /* HomeAPI.swift */; };
 		5071E39B2535F60000D2A119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5071E39A2535F60000D2A119 /* AppDelegate.swift */; };
 		5071E39D2535F60000D2A119 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5071E39C2535F60000D2A119 /* SceneDelegate.swift */; };
 		5071E3A22535F60000D2A119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5071E3A02535F60000D2A119 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		5016D94725397E4E00710F9A /* HouseDetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailDataSource.swift; sourceTree = "<group>"; };
 		5016D94A2539929D00710F9A /* IsRentedButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsRentedButtonTableViewCell.swift; sourceTree = "<group>"; };
 		5016D94B2539929D00710F9A /* IsRentedButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IsRentedButtonTableViewCell.xib; sourceTree = "<group>"; };
+		5016D9502539B22E00710F9A /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
 		5071E3972535F60000D2A119 /* ShareHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5071E39A2535F60000D2A119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5071E39C2535F60000D2A119 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				5016D90725371EEB00710F9A /* HouseListDataSource.swift */,
 				5016D9102537973900710F9A /* MapPoint.swift */,
 				5016D94725397E4E00710F9A /* HouseDetailDataSource.swift */,
+				5016D9502539B22E00710F9A /* HomeAPI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				5071E3B62535FAB100D2A119 /* Houses.swift in Sources */,
 				5016D94825397E4E00710F9A /* HouseDetailDataSource.swift in Sources */,
 				5016D945253979B100710F9A /* HouseDetailViewController.swift in Sources */,
+				5016D9512539B22E00710F9A /* HomeAPI.swift in Sources */,
 				5071E39D2535F60000D2A119 /* SceneDelegate.swift in Sources */,
 				5016D90825371EEB00710F9A /* HouseListDataSource.swift in Sources */,
 				5016D8FA25371B5300710F9A /* HouseTableViewCell.swift in Sources */,
