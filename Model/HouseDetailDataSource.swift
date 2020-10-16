@@ -68,12 +68,19 @@ class HouseDetailDataSource: NSObject {
         descriptionCell.configure(with: house.description)
         return descriptionCell
     }
+    private func configureButtonCell(from house: HouseDetail, cell: UITableViewCell) -> UITableViewCell {
+        guard let buttonCell = cell as? IsRentedButtonTableViewCell else {
+            fatalError("Unexpected cell")
+        }
+        buttonCell.configure(with: house.isRented)
+        return buttonCell
+    }
     
 }
 
 extension HouseDetailDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -90,9 +97,9 @@ extension HouseDetailDataSource: UITableViewDataSource {
                 let cell = tableView.dequeueReusableCell(withIdentifier: HouseDescriptionTableViewCell.identifier, for: indexPath)
                 return configureDescriptionCell(from: houseViewModel, cell: cell)
                 
-//            case 2:
-//                let cell = tableView.dequeueReusableCell(withIdentifier: HouseImageTableViewCell.identifier, for: indexPath)
-//                return configureImagesCell(from: houseViewModel, cell: cell)
+            case 2:
+                let cell = tableView.dequeueReusableCell(withIdentifier: IsRentedButtonTableViewCell.identifier, for: indexPath)
+                return configureButtonCell(from: houseViewModel, cell: cell)
             default:
                 fatalError("Unexpected cell")
         }

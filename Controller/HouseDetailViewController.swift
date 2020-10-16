@@ -23,7 +23,7 @@ class HouseDetailViewController: UIViewController {
     
     func  setupTableView() {
         // 1. Register cell types
-        let identifiers = [HouseDetailsTableViewCell.identifier, HouseImageTableViewCell.identifier, HouseDescriptionTableViewCell.identifier]
+        let identifiers = [HouseImageTableViewCell.identifier, HouseDetailsTableViewCell.identifier, HouseDescriptionTableViewCell.identifier, IsRentedButtonTableViewCell.identifier]
         for identifier in identifiers {
             let nib = UINib(nibName: identifier, bundle: nil)
             tableView.register(nib, forCellReuseIdentifier: identifier)

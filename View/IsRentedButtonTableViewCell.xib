@@ -29,6 +29,9 @@
                 <constraint firstItem="ZX9-Am-Qto" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" id="gNo-AW-Jki"/>
                 <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="ZX9-Am-Qto" secondAttribute="trailing" id="vz4-8o-MrA"/>
             </constraints>
+            <connections>
+                <outlet property="isRentedButton" destination="ZX9-Am-Qto" id="7R8-Es-5Ks"/>
+            </connections>
             <point key="canvasLocation" x="153.62318840579712" y="70.3125"/>
         </tableViewCell>
     </objects>

@@ -9,6 +9,11 @@ import UIKit
 
 class IsRentedButtonTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var isRentedButton: UIButton!
     static let identifier = "IsRentedButtonTableViewCell"
     
+    func configure(with isRented: Bool) {
+        
+        isRented ? (isRentedButton.titleLabel?.text = "Alquilado") : (isRentedButton.titleLabel?.text = "Disponible")
+    }
 }
