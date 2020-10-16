@@ -113,7 +113,7 @@ private extension MKMapView {
 
 extension HouseListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("hola!!")
+        print(indexPath)
         performSegue(withIdentifier: HouseDetailViewController.segueIdentifier, sender: nil)
     }
 }

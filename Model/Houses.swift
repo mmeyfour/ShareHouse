@@ -42,3 +42,4 @@ struct HouseSummaryViewModel {
     let location: Coordinate
     let isRented: Bool
 }
+

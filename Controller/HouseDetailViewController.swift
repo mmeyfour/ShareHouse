@@ -11,11 +11,12 @@ class HouseDetailViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-//    let houseDetailDataSource = HouseDetailDataSource()
+    let houseDetailDataSource = HouseDetailDataSource()
     static let segueIdentifier = "ShowHouseDetail"
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print(houseDetailDataSource.houseName)
     }
 }
