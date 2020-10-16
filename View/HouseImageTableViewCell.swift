@@ -15,6 +15,6 @@ class HouseImageTableViewCell: UITableViewCell {
     
     func configure(with image: UIImage) {
         // load images
-        houseImageView.image = image
+        houseImageView.image = #imageLiteral(resourceName: "house.png")
         }
     }

@@ -23,8 +23,7 @@ struct HouseDetail: Codable {
     let dateAdded: Date
     let location: Coordinate
     let isRented: Bool
-    
-}
+    }
 
 struct HouseList: Codable {
     var dictionaryRentalList : [String : HouseDetail] = [:]

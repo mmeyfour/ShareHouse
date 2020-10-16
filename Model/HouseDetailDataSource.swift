@@ -53,13 +53,13 @@ class HouseDetailDataSource: NSObject {
         return namedCell
     }
     
-    //    private func configureImagesCell(from house: HouseDetail, cell: UITableViewCell) -> UITableViewCell {
-    //        guard let imagesCell = cell as? HouseImageTableViewCell else {
-    //            fatalError("Unexpected cell")
-    //        }
-    //        imagesCell.configure(with: house.image)
-    //        return imagesCell
-    //    }
+        private func configureImagesCell(cell: UITableViewCell) -> UITableViewCell {
+            guard let imagesCell = cell as? HouseImageTableViewCell else {
+                fatalError("Unexpected cell")
+            }
+            imagesCell.configure(with: #imageLiteral(resourceName: "house.png"))
+            return imagesCell
+        }
     
     private func configureDescriptionCell(from house: HouseDetail, cell: UITableViewCell) -> UITableViewCell {
         guard let descriptionCell = cell as? HouseDescriptionTableViewCell else {
@@ -80,7 +80,7 @@ class HouseDetailDataSource: NSObject {
 
 extension HouseDetailDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -90,14 +90,18 @@ extension HouseDetailDataSource: UITableViewDataSource {
         let rowIndex = indexPath.row
         switch rowIndex {
             case 0:
+                let cell = tableView.dequeueReusableCell(withIdentifier: HouseImageTableViewCell.identifier, for: indexPath)
+                return configureImagesCell(cell: cell)
+                
+            case 1:
                 let cell = tableView.dequeueReusableCell(withIdentifier: HouseDetailsTableViewCell.identifier, for: indexPath)
                 return configureDetailCell(from: houseViewModel, cell: cell)
                 
-            case 1:
+            case 2:
                 let cell = tableView.dequeueReusableCell(withIdentifier: HouseDescriptionTableViewCell.identifier, for: indexPath)
                 return configureDescriptionCell(from: houseViewModel, cell: cell)
                 
-            case 2:
+            case 3:
                 let cell = tableView.dequeueReusableCell(withIdentifier: IsRentedButtonTableViewCell.identifier, for: indexPath)
                 return configureButtonCell(from: houseViewModel, cell: cell)
             default:
