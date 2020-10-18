@@ -16,7 +16,7 @@ class HouseDetailsTableViewCell: UITableViewCell {
     @IBOutlet weak var houseAreaTextLabel: UILabel!
     
     func configure(with adress: String, price: Int, area: Int, rooms: Int) {
-        
+        houseAdressTextLabel.text = adress
         housePriceTextLabel.text = "\(price) €/month"
         houseAreaTextLabel.text = "\(area)^2, \(rooms) rooms "
     }
