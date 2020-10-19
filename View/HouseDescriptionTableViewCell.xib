@@ -17,20 +17,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9L-Ua-FAt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="16" y="8" width="288" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="c9L-Ua-FAt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="3Bx-Zj-zgA"/>
+                    <constraint firstAttribute="bottom" secondItem="c9L-Ua-FAt" secondAttribute="bottom" constant="16" id="6S7-gL-7uN"/>
+                    <constraint firstAttribute="trailing" secondItem="c9L-Ua-FAt" secondAttribute="trailing" constant="16" id="JvE-g0-xcs"/>
+                    <constraint firstItem="c9L-Ua-FAt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="WuP-Qd-6zS"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <constraints>
-                <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="c9L-Ua-FAt" secondAttribute="bottom" id="IdT-Td-z63"/>
-                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="c9L-Ua-FAt" secondAttribute="trailing" id="VoI-3P-HbA"/>
-                <constraint firstItem="c9L-Ua-FAt" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" id="vJC-zM-RUg"/>
-                <constraint firstItem="c9L-Ua-FAt" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" id="xWn-5d-Kha"/>
-            </constraints>
             <connections>
                 <outlet property="houseDescriptionTextLabel" destination="c9L-Ua-FAt" id="H3c-mX-wk2"/>
             </connections>

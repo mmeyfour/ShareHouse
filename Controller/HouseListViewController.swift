@@ -25,25 +25,7 @@ class HouseListViewController: UIViewController {
         setupMapKit()
         networkController.fetchHouseList()
         
-//        for house in houseListDataSource!.houses {
-//            print(house.name)
-//            print(house.dateAdded)
-//            print(house.description)
-//            print(house.floorArea)
-//            print(house.image)
-//            print(house.location)
-//            print(house.monthlyPrice)
-//            print(house.realtor)
-//            print(house.rooms)
-//            print(house.isRented)
-//            print("-----------------------------------")
-//            let Point = MapPoint(
-//                title: "\(house.realtor)",
-//                locationName: "\(house.name)",
-//                discipline: "House",
-//                coordinate: CLLocationCoordinate2D(latitude: house.location.latitude, longitude: house.location.longitude))
-//            mapKit.addAnnotation(Point)
-//        }
+
     }
     
     func setupView() {
@@ -59,33 +41,11 @@ class HouseListViewController: UIViewController {
         let identifier = HouseTableViewCell.identifier
         let nib = UINib(nibName: identifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: identifier)
-    
+        
         // 2. Connect delegate
         tableView.delegate = self
     }
-    //class PokemonListViewController: UIViewController {
-    //    @IBOutlet weak var tableView: UITableView!
-    //
-    //    lazy var networkController = NetworkController(session: URLSession(configuration: .default), pokemonListDelegate: self)
-    //    var pokemonListDataSource: PokemonListDataSource?
-    //
-    //    override func viewDidLoad() {
-    //        super.viewDidLoad()
-    //        setupTableView()
-    //        networkController.fetchPokemonList()
-    //    }
-    //
-    //    func  setupTableView() {
-    //        // 1. Register cell types
-    //        let identifier = PokemonTableViewCell.identifier
-    //        let nib = UINib(nibName: identifier, bundle: nil)
-    //        tableView.register(nib, forCellReuseIdentifier: identifier)
-    //
-    //        // 2. Connect delegate
-    //        tableView.delegate = self
-    //    }
-    //}
-
+    
     
     @IBAction func didChangeTheSegment(_ sender: UISegmentedControl) {
         if segmentController.selectedSegmentIndex == 0 {
@@ -155,6 +115,26 @@ extension HouseListViewController: HouseListDelegate {
         houseListDataSource = HouseListDataSource(houses: houses)
         tableView.dataSource = houseListDataSource
         tableView.reloadData()
+        
+        for house in houseListDataSource!.houses {
+            print(house.name)
+            print(house.dateAdded)
+            print(house.description)
+            print(house.floorArea)
+            print(house.image)
+            print(house.location)
+            print(house.monthlyPrice)
+            print(house.realtor)
+            print(house.rooms)
+            print(house.isRented)
+            print("-----------------------------------")
+            let Point = MapPoint(
+                title: "\(house.realtor)",
+                locationName: "\(house.name)",
+                discipline: "House",
+                coordinate: CLLocationCoordinate2D(latitude: house.location.latitude, longitude: house.location.longitude))
+            mapKit.addAnnotation(Point)
+        }
     }
 }
 

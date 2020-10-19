@@ -16,23 +16,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="145"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1uO-RM-wk2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="145"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1uO-RM-wk2">
+                        <rect key="frame" x="16" y="8" width="288" height="121"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pn7-jM-PCW">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="48.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGa-eh-dR8">
-                                <rect key="frame" x="0.0" y="48.5" width="320" height="48"/>
+                                <rect key="frame" x="0.0" y="43" width="288" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ef-45-AQm">
-                                <rect key="frame" x="0.0" y="96.5" width="320" height="48.5"/>
+                                <rect key="frame" x="0.0" y="86" width="288" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -40,14 +40,14 @@
                         </subviews>
                     </stackView>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="1uO-RM-wk2" secondAttribute="trailing" constant="16" id="0Cr-h8-ybz"/>
+                    <constraint firstItem="1uO-RM-wk2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Gyw-eM-fxc"/>
+                    <constraint firstAttribute="bottom" secondItem="1uO-RM-wk2" secondAttribute="bottom" constant="16" id="MdP-cc-Q02"/>
+                    <constraint firstItem="1uO-RM-wk2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="cRi-Sg-WR9"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <constraints>
-                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="1uO-RM-wk2" secondAttribute="trailing" id="Iuy-sT-yjc"/>
-                <constraint firstItem="njF-e1-oar" firstAttribute="top" secondItem="1uO-RM-wk2" secondAttribute="top" id="MJz-Sa-YtW"/>
-                <constraint firstItem="1uO-RM-wk2" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" id="Onr-kV-uz1"/>
-                <constraint firstItem="1uO-RM-wk2" firstAttribute="bottom" secondItem="njF-e1-oar" secondAttribute="bottom" id="iHb-4a-gqk"/>
-            </constraints>
             <connections>
                 <outlet property="houseAdressTextLabel" destination="pn7-jM-PCW" id="yQA-uu-p2I"/>
                 <outlet property="houseAreaTextLabel" destination="3Ef-45-AQm" id="rU7-4x-DDD"/>

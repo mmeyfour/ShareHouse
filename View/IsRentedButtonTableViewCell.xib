@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,22 +18,31 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZX9-Am-Qto">
-                        <rect key="frame" x="0.0" y="0.0" width="392" height="164"/>
-                        <state key="normal" title="Button"/>
+                        <rect key="frame" x="16" y="16" width="360" height="132"/>
+                        <color key="backgroundColor" red="0.17624747753143311" green="0.014150968752801418" blue="0.20448100566864014" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                        </state>
                     </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="ZX9-Am-Qto" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="LdP-hg-Wpr"/>
+                    <constraint firstAttribute="bottom" secondItem="ZX9-Am-Qto" secondAttribute="bottom" constant="16" id="NIe-iW-RJJ"/>
+                    <constraint firstAttribute="trailing" secondItem="ZX9-Am-Qto" secondAttribute="trailing" constant="16" id="PRz-da-5a3"/>
+                    <constraint firstItem="ZX9-Am-Qto" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Ud0-Qx-Di7"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <constraints>
-                <constraint firstItem="ZX9-Am-Qto" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" id="9RP-53-IKZ"/>
-                <constraint firstItem="njF-e1-oar" firstAttribute="bottom" secondItem="ZX9-Am-Qto" secondAttribute="bottom" id="JTY-na-RP4"/>
-                <constraint firstItem="ZX9-Am-Qto" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" id="gNo-AW-Jki"/>
-                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="ZX9-Am-Qto" secondAttribute="trailing" id="vz4-8o-MrA"/>
-            </constraints>
             <connections>
                 <outlet property="isRentedButton" destination="ZX9-Am-Qto" id="7R8-Es-5Ks"/>
             </connections>
             <point key="canvasLocation" x="153.62318840579712" y="70.3125"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
