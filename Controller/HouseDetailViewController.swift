@@ -58,6 +58,8 @@ extension HouseDetailViewController: UITableViewDelegate {
 
 extension HouseDetailViewController: HouseIsRentedButtonTableViewCellDelegate{
     func houseDidTappedIsRentedButton() {
+        houseDetailDataSource?.house.changeIsRentedState()
         print("TAG \(houseDetailDataSource!.house.isRented)")
+        tableView.reloadData()
     }
 }

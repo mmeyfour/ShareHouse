@@ -10,7 +10,7 @@ import UIKit
 
 class HouseDetailDataSource: NSObject {
     
-    let house: HouseSummaryViewModel
+    var house: HouseSummaryViewModel
     
     init(house: HouseSummaryViewModel) {
         self.house = house

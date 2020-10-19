@@ -41,7 +41,7 @@ class HouseNetworkController: NSObject {
             let dateFormatterPrint = DateFormatter()
             dateFormatterPrint.dateFormat = "dd MMMM yyyy"
             for (key, value) in malagaRentalList {
-                print("\(key): \(value)")
+//                print("\(key): \(value)")
                 if houseID == key {
                     let house = HouseSummaryViewModel(id: key, image: UIImage.mainImage(houseId: "house"), name: value.name, realtor: value.realtor, monthlyPrice: value.monthlyPrice, rooms: value.rooms, floorArea: value.floorArea, description: value.description, dateAdded: value.dateAdded, location: value.location, isRented: value.isRented)
                     print("la casa seleccionada es TAG : \(house)")

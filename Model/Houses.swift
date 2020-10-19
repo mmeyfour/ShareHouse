@@ -40,6 +40,12 @@ struct HouseSummaryViewModel {
     let description: String
     let dateAdded: Date
     let location: Coordinate
-    let isRented: Bool
+    var isRented: Bool
 }
 
+extension HouseSummaryViewModel{
+    mutating func changeIsRentedState() {
+        isRented.toggle()
+        print(isRented)
+    }
+}
