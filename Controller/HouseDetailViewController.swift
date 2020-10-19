@@ -9,20 +9,18 @@ import UIKit
 
 class HouseDetailViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    
-    let houseDetailDataSource = HouseDetailDataSource()
+    lazy var networkController = HouseNetworkController(session: URLSession(configuration: .default), houseDetailDelegate: self)
+    var houseDetailDataSource: HouseDetailDataSource?
     static let segueIdentifier = "ShowHouseDetail"
     var selectedHouse: String?
     
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("ID : \(selectedHouse!)")
         setupTableView()
-//        let house = NetworkController.fechHouseDetail(selectedHouse)
-
-        //print(houseDetailDataSource.houseName)
+        networkController.fetchHouseList(houseID: selectedHouse!)
         
     }
     
@@ -34,9 +32,6 @@ class HouseDetailViewController: UIViewController {
             tableView.register(nib, forCellReuseIdentifier: identifier)
         }
         
-        // 2. Connect data source
-        tableView.dataSource = houseDetailDataSource
-        
         // 3. Disable separator
         tableView.separatorStyle = .none
         
@@ -44,34 +39,12 @@ class HouseDetailViewController: UIViewController {
        
     }
 }
-//
-//extension HouseDetailViewController: HouseDetailDelegate {
-//
-//    func didFetchHouse(house: HouseSummaryViewModel) {
-//
-////        houseListDataSource = HouseListDataSource(houses: houses)
-////        tableView.dataSource = houseListDataSource
-////        tableView.reloadData()
-////
-////        for house in houseListDataSource!.houses {
-////            print(house.name)
-////            print(house.dateAdded)
-////            print(house.description)
-////            print(house.floorArea)
-////            print(house.image)
-////            print(house.location)
-////            print(house.monthlyPrice)
-////            print(house.realtor)
-////            print(house.rooms)
-////            print(house.isRented)
-////            print("-----------------------------------")
-////            let Point = MapPoint(
-////                title: "\(house.realtor)",
-////                locationName: "\(house.name)",
-////                discipline: "House",
-////                coordinate: CLLocationCoordinate2D(latitude: house.location.latitude, longitude: house.location.longitude))
-////            mapKit.addAnnotation(Point)
-////        }
-//    }
-//
-//}
+
+extension HouseDetailViewController: HouseDetailDelegate {
+    func didFetch(house: HouseSummaryViewModel) {
+        houseDetailDataSource = HouseDetailDataSource(house: house)
+        tableView.dataSource = houseDetailDataSource
+        tableView.reloadData()
+    }
+
+}

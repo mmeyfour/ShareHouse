@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class HouseListDataSource: NSObject {
+    
     let houses: [HouseSummaryViewModel]
     
     init(houses: [HouseSummaryViewModel]) {

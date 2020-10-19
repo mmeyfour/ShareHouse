@@ -9,39 +9,15 @@ import Foundation
 import UIKit
 
 class HouseDetailDataSource: NSObject {
-    private let houseViewModel: HouseDetail?
     
-    var houseName: String {
-        
-        return houseViewModel?.name ?? "Por defecto"
+    let house: HouseSummaryViewModel
+    
+    init(house: HouseSummaryViewModel) {
+        self.house = house
+        super.init()
     }
     
-    override init() {
-        houseViewModel = HouseDetailDataSource.getHouse()
-    }
-    
-    static func getHouse() -> HouseDetail? {
-        guard let url = Bundle.main.url(forResource: "HouseDetails", withExtension: "json"),
-              let data = try? Data(contentsOf: url) else {
-            
-            return nil
-        }
-        
-        let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "yyyy-MM-dd"
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        decoder.dateDecodingStrategy = .formatted(dateFormatterGet)
-        guard let house = try? decoder.decode(HouseDetail.self, from: data) else {
-            return nil
-        }
-        let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "dd MMMM yyyy"
-        print("El propietario \(house.realtor) a fecha de \(dateFormatterPrint.string(from: house.dateAdded)) alquila el apartamento en \(house.name) con \(house.floorArea) m^2 al precio de \(house.monthlyPrice) €/mes")
-        return house
-    }
-    
-    private func configureDetailCell(from house: HouseDetail, cell: UITableViewCell) -> UITableViewCell {
+    private func configureDetailCell(from house: HouseSummaryViewModel, cell: UITableViewCell) -> UITableViewCell {
         guard let namedCell = cell as? HouseDetailsTableViewCell else {
             fatalError("Unexpected cell")
         }
@@ -50,28 +26,29 @@ class HouseDetailDataSource: NSObject {
         return namedCell
     }
     
-        private func configureImagesCell(from house: HouseDetail, cell: UITableViewCell) -> UITableViewCell {
-            guard let imagesCell = cell as? HouseImageTableViewCell else {
-                fatalError("Unexpected cell")
-            }
-            house.isRented ? imagesCell.configure(with: #imageLiteral(resourceName: "rented.png")) : imagesCell.configure(with: #imageLiteral(resourceName: "house.png"))
-            if house.isRented {
-                print("No Disponible")
-            } else if !house.isRented {
-                print("Disponible")
-            }
-           // imagesCell.configure(with: #imageLiteral(resourceName: "house.png"))
-            return imagesCell
+    private func configureImagesCell(from house: HouseSummaryViewModel, cell: UITableViewCell) -> UITableViewCell {
+        guard let imagesCell = cell as? HouseImageTableViewCell else {
+            fatalError("Unexpected cell")
         }
+        house.isRented ? imagesCell.configure(with: #imageLiteral(resourceName: "rented.png")) : imagesCell.configure(with: #imageLiteral(resourceName: "house.png"))
+        if house.isRented {
+            print("No Disponible")
+        } else if !house.isRented {
+            print("Disponible")
+        }
+        // imagesCell.configure(with: #imageLiteral(resourceName: "house.png"))
+        return imagesCell
+    }
     
-    private func configureDescriptionCell(from house: HouseDetail, cell: UITableViewCell) -> UITableViewCell {
+    private func configureDescriptionCell(from house: HouseSummaryViewModel, cell: UITableViewCell) -> UITableViewCell {
         guard let descriptionCell = cell as? HouseDescriptionTableViewCell else {
             fatalError("Unexpected cell")
         }
         descriptionCell.configure(with: house.description)
         return descriptionCell
     }
-    private func configureButtonCell(from house: HouseDetail, cell: UITableViewCell) -> UITableViewCell {
+    
+    private func configureButtonCell(from house: HouseSummaryViewModel, cell: UITableViewCell) -> UITableViewCell {
         guard let buttonCell = cell as? IsRentedButtonTableViewCell else {
             fatalError("Unexpected cell")
         }
@@ -87,28 +64,26 @@ extension HouseDetailDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let houseViewModel = houseViewModel else {
-            fatalError("Mising a view model")
-        }
+        let houseViewModel = house
         let rowIndex = indexPath.row
         switch rowIndex {
-            case 0:
-                let cell = tableView.dequeueReusableCell(withIdentifier: HouseImageTableViewCell.identifier, for: indexPath)
-                return configureImagesCell(from: houseViewModel, cell: cell)
-                
-            case 1:
-                let cell = tableView.dequeueReusableCell(withIdentifier: HouseDetailsTableViewCell.identifier, for: indexPath)
-                return configureDetailCell(from: houseViewModel, cell: cell)
-                
-            case 2:
-                let cell = tableView.dequeueReusableCell(withIdentifier: HouseDescriptionTableViewCell.identifier, for: indexPath)
-                return configureDescriptionCell(from: houseViewModel, cell: cell)
-                
-            case 3:
-                let cell = tableView.dequeueReusableCell(withIdentifier: IsRentedButtonTableViewCell.identifier, for: indexPath)
-                return configureButtonCell(from: houseViewModel, cell: cell)
-            default:
-                fatalError("Unexpected cell")
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: HouseImageTableViewCell.identifier, for: indexPath)
+            return configureImagesCell(from: houseViewModel, cell: cell)
+            
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: HouseDetailsTableViewCell.identifier, for: indexPath)
+            return configureDetailCell(from: houseViewModel, cell: cell)
+            
+        case 2:
+            let cell = tableView.dequeueReusableCell(withIdentifier: HouseDescriptionTableViewCell.identifier, for: indexPath)
+            return configureDescriptionCell(from: houseViewModel, cell: cell)
+            
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: IsRentedButtonTableViewCell.identifier, for: indexPath)
+            return configureButtonCell(from: houseViewModel, cell: cell)
+        default:
+            fatalError("Unexpected cell")
         }
     }
 }

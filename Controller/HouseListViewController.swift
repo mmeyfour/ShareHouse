@@ -9,6 +9,7 @@ import UIKit
 import MapKit
 
 class HouseListViewController: UIViewController {
+    
     lazy var networkController = NetworkController(session: URLSession(configuration: .default), houseListDelegate: self)
     var houseListDataSource: HouseListDataSource?
     var selectedHouseID: String?

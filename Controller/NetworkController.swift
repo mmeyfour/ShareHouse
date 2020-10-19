@@ -23,7 +23,7 @@ class NetworkController: NSObject {
         self.delegate = houseListDelegate
         
         let dateFormatterGet = DateFormatter()
-       dateFormatterGet.dateFormat = "yyyy-MM-dd"
+        dateFormatterGet.dateFormat = "yyyy-MM-dd"
         decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         decoder.dateDecodingStrategy = .formatted(dateFormatterGet)
@@ -32,18 +32,16 @@ class NetworkController: NSObject {
     func fetchHouseList() {
         let request = URLRequest(url: HouseAPI.houseURL)
         houseListDataTask = session.dataTask(with: request) { (data, _, _) in
-                        guard let data = data else {
-                
+            guard let data = data else {
                 return
             }
             
-
             let malagaRentalList = try! self.decoder.decode([String:HouseDetail].self, from: data)
             let dateFormatterPrint = DateFormatter()
             dateFormatterPrint.dateFormat = "dd MMMM yyyy"
-                    for (key, value) in malagaRentalList {
-                        print("\(key): \(value)")
-                    }
+            for (key, value) in malagaRentalList {
+                print("\(key): \(value)")
+            }
             let houses = malagaRentalList.map {(key, house)  in
                 HouseSummaryViewModel(id: key, image: UIImage.mainImage(houseId: "house"), name: house.name, realtor: house.realtor, monthlyPrice: house.monthlyPrice, rooms: house.rooms, floorArea: house.floorArea, description: house.description, dateAdded: house.dateAdded, location: house.location, isRented: house.isRented)
             }
