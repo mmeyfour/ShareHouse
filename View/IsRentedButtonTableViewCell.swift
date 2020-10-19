@@ -7,13 +7,27 @@
 
 import UIKit
 
+protocol HouseIsRentedButtonTableViewCellDelegate {
+    func houseDidTappedIsRentedButton()
+}
+
 class IsRentedButtonTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var isRentedButton: UIButton!
     static let identifier = "IsRentedButtonTableViewCell"
+    var delegate:HouseIsRentedButtonTableViewCellDelegate?
+    
+    @IBOutlet weak var isRentedButton: UIButton!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
     
     func configure(with isRented: Bool) {
         
         isRented ? (isRentedButton.titleLabel?.text = "Alquilado") : (isRentedButton.titleLabel?.text = "Disponible")
+    }
+    @IBAction func didTappedIsRentedButton(_ sender: UIButton) {
+        delegate?.houseDidTappedIsRentedButton()
+        print("alquilado !!!!!!!!!")
     }
 }

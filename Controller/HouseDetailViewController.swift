@@ -36,7 +36,7 @@ class HouseDetailViewController: UIViewController {
         tableView.separatorStyle = .none
         
         // 4. Connect delegate
-       
+        tableView.delegate = self
     }
 }
 
@@ -46,5 +46,17 @@ extension HouseDetailViewController: HouseDetailDelegate {
         tableView.dataSource = houseDetailDataSource
         tableView.reloadData()
     }
+}
 
+extension HouseDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let buttonCell = cell as? IsRentedButtonTableViewCell else { return }
+        buttonCell.delegate = self
+    }
+}
+
+extension HouseDetailViewController: HouseIsRentedButtonTableViewCellDelegate{
+    func houseDidTappedIsRentedButton() {
+        print("alquilado !!!!!!!!!")
+    }
 }

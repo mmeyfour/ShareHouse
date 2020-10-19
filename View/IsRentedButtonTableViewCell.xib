@@ -24,6 +24,9 @@
                         <state key="normal" title="Button">
                             <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                         </state>
+                        <connections>
+                            <action selector="didTappedIsRentedButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1wV-JL-AHD"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
