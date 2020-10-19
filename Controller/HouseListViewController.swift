@@ -113,9 +113,7 @@ private extension MKMapView {
 
 extension HouseListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("*****************")
-        print(houseListDataSource!)
-        print("la casa seleccionada es \(houseListDataSource!.houses[indexPath.row].name)")
+        print("el ID de lacasa seleccionada es : \(houseListDataSource!.houses[indexPath.row].id)")
         selectedHouse = houseListDataSource!.houses[indexPath.row]
         performSegue(withIdentifier: HouseDetailViewController.segueIdentifier, sender: nil)
     }

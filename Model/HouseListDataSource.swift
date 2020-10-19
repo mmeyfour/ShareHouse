@@ -23,6 +23,7 @@ extension HouseListDataSource: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         //        1. Dequeue cell
         guard let houseCell = tableView.dequeueReusableCell(withIdentifier: HouseTableViewCell.identifier, for: indexPath) as? HouseTableViewCell else {
             fatalError("Wrong type of cell")

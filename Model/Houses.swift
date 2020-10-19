@@ -30,6 +30,7 @@ struct HouseList: Codable {
 }
 
 struct HouseSummaryViewModel {
+    let id: String
     let image: UIImage
     let name: String
     let realtor : String

@@ -45,7 +45,7 @@ class NetworkController: NSObject {
                         print("\(key): \(value)")
                     }
             let houses = malagaRentalList.map {(key, house)  in
-                HouseSummaryViewModel(image: UIImage.mainImage(houseId: "house"), name: house.name, realtor: house.realtor, monthlyPrice: house.monthlyPrice, rooms: house.rooms, floorArea: house.floorArea, description: house.description, dateAdded: house.dateAdded, location: house.location, isRented: house.isRented)
+                HouseSummaryViewModel(id: key, image: UIImage.mainImage(houseId: "house"), name: house.name, realtor: house.realtor, monthlyPrice: house.monthlyPrice, rooms: house.rooms, floorArea: house.floorArea, description: house.description, dateAdded: house.dateAdded, location: house.location, isRented: house.isRented)
             }
             print("++++++++++++++++++++++++++++++++")
             print(houses)
