@@ -20,14 +20,20 @@ class IsRentedButtonTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        
     }
     
     func configure(with isRented: Bool) {
+        print("TAG: \(isRented)")
+        UpdateUI(isRented: isRented)
+        isRentedButton.backgroundColor = .green
         
-        isRented ? (isRentedButton.titleLabel?.text = "Alquilado") : (isRentedButton.titleLabel?.text = "Disponible")
+    }
+    func UpdateUI(isRented: Bool) {
+        isRented ? isRentedButton.setTitle("Not Available", for: .normal) : isRentedButton.setTitle("Available", for: .normal)
     }
     @IBAction func didTappedIsRentedButton(_ sender: UIButton) {
         delegate?.houseDidTappedIsRentedButton()
-        print("alquilado !!!!!!!!!")
     }
 }

@@ -52,11 +52,12 @@ extension HouseDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let buttonCell = cell as? IsRentedButtonTableViewCell else { return }
         buttonCell.delegate = self
+        
     }
 }
 
 extension HouseDetailViewController: HouseIsRentedButtonTableViewCellDelegate{
     func houseDidTappedIsRentedButton() {
-        print("alquilado !!!!!!!!!")
+        
     }
 }
