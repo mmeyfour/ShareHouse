@@ -11,7 +11,7 @@ import MapKit
 class HouseListViewController: UIViewController {
     lazy var networkController = NetworkController(session: URLSession(configuration: .default), houseListDelegate: self)
     var houseListDataSource: HouseListDataSource?
-    var selectedHouse: HouseSummaryViewModel?
+    var selectedHouseID: String?
     
     @IBOutlet weak var mapKit: MKMapView!
     @IBOutlet weak var segmentController: UISegmentedControl!
@@ -91,7 +91,7 @@ class HouseListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is HouseDetailViewController {
             let vc = segue.destination as? HouseDetailViewController
-            vc?.selectedHouse = selectedHouse
+            vc?.selectedHouse = selectedHouseID
             
         }
     }
@@ -114,7 +114,7 @@ private extension MKMapView {
 extension HouseListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("el ID de lacasa seleccionada es : \(houseListDataSource!.houses[indexPath.row].id)")
-        selectedHouse = houseListDataSource!.houses[indexPath.row]
+        selectedHouseID = houseListDataSource!.houses[indexPath.row].id
         performSegue(withIdentifier: HouseDetailViewController.segueIdentifier, sender: nil)
     }
 }

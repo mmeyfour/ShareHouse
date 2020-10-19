@@ -13,13 +13,14 @@ class HouseDetailViewController: UIViewController {
     
     let houseDetailDataSource = HouseDetailDataSource()
     static let segueIdentifier = "ShowHouseDetail"
-    var selectedHouse: HouseSummaryViewModel?
+    var selectedHouse: String?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("la casa seleccionada es: \(selectedHouse!.name)")
+        print("ID : \(selectedHouse!)")
         setupTableView()
+//        let house = NetworkController.fechHouseDetail(selectedHouse)
 
         //print(houseDetailDataSource.houseName)
         
@@ -43,3 +44,34 @@ class HouseDetailViewController: UIViewController {
        
     }
 }
+//
+//extension HouseDetailViewController: HouseDetailDelegate {
+//
+//    func didFetchHouse(house: HouseSummaryViewModel) {
+//
+////        houseListDataSource = HouseListDataSource(houses: houses)
+////        tableView.dataSource = houseListDataSource
+////        tableView.reloadData()
+////
+////        for house in houseListDataSource!.houses {
+////            print(house.name)
+////            print(house.dateAdded)
+////            print(house.description)
+////            print(house.floorArea)
+////            print(house.image)
+////            print(house.location)
+////            print(house.monthlyPrice)
+////            print(house.realtor)
+////            print(house.rooms)
+////            print(house.isRented)
+////            print("-----------------------------------")
+////            let Point = MapPoint(
+////                title: "\(house.realtor)",
+////                locationName: "\(house.name)",
+////                discipline: "House",
+////                coordinate: CLLocationCoordinate2D(latitude: house.location.latitude, longitude: house.location.longitude))
+////            mapKit.addAnnotation(Point)
+////        }
+//    }
+//
+//}

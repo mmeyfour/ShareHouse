@@ -33,6 +33,7 @@
 		5071E3B62535FAB100D2A119 /* Houses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5071E3B52535FAB100D2A119 /* Houses.swift */; };
 		5071E3C12535FE6200D2A119 /* HouseList.json in Resources */ = {isa = PBXBuildFile; fileRef = 5071E3C02535FE6200D2A119 /* HouseList.json */; };
 		5071E3C42535FE7200D2A119 /* HouseDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 5071E3C32535FE7200D2A119 /* HouseDetails.json */; };
+		50EBC1F5253D971C00A1E5DD /* HouseNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EBC1F4253D971C00A1E5DD /* HouseNetworkController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		5071E3B52535FAB100D2A119 /* Houses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Houses.swift; sourceTree = "<group>"; };
 		5071E3C02535FE6200D2A119 /* HouseList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HouseList.json; sourceTree = "<group>"; };
 		5071E3C32535FE7200D2A119 /* HouseDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HouseDetails.json; sourceTree = "<group>"; };
+		50EBC1F4253D971C00A1E5DD /* HouseNetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseNetworkController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				5016D90425371D2600710F9A /* HouseListViewController.swift */,
 				5016D944253979B100710F9A /* HouseDetailViewController.swift */,
 				5016D9572539B39400710F9A /* NetworkController.swift */,
+				50EBC1F4253D971C00A1E5DD /* HouseNetworkController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				5016D945253979B100710F9A /* HouseDetailViewController.swift in Sources */,
 				5016D9512539B22E00710F9A /* HouseAPI.swift in Sources */,
 				5071E39D2535F60000D2A119 /* SceneDelegate.swift in Sources */,
+				50EBC1F5253D971C00A1E5DD /* HouseNetworkController.swift in Sources */,
 				5016D90825371EEB00710F9A /* HouseListDataSource.swift in Sources */,
 				5016D8FA25371B5300710F9A /* HouseTableViewCell.swift in Sources */,
 				5016D9302538990300710F9A /* HouseDetailsTableViewCell.swift in Sources */,
