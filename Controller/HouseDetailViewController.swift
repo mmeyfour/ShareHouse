@@ -13,12 +13,16 @@ class HouseDetailViewController: UIViewController {
     
     let houseDetailDataSource = HouseDetailDataSource()
     static let segueIdentifier = "ShowHouseDetail"
+    var selectedHouse: HouseSummaryViewModel?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("la casa seleccionada es: \(selectedHouse!.name)")
         setupTableView()
 
-        print(houseDetailDataSource.houseName)
+        //print(houseDetailDataSource.houseName)
+        
     }
     
     func  setupTableView() {

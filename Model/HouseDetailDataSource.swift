@@ -18,9 +18,6 @@ class HouseDetailDataSource: NSObject {
     
     override init() {
         houseViewModel = HouseDetailDataSource.getHouse()
-        //        print("********************************")
-        //        print(houseViewModel)
-        //        print("********************************")
     }
     
     static func getHouse() -> HouseDetail? {
@@ -53,11 +50,17 @@ class HouseDetailDataSource: NSObject {
         return namedCell
     }
     
-        private func configureImagesCell(cell: UITableViewCell) -> UITableViewCell {
+        private func configureImagesCell(from house: HouseDetail, cell: UITableViewCell) -> UITableViewCell {
             guard let imagesCell = cell as? HouseImageTableViewCell else {
                 fatalError("Unexpected cell")
             }
-            imagesCell.configure(with: #imageLiteral(resourceName: "house.png"))
+            house.isRented ? imagesCell.configure(with: #imageLiteral(resourceName: "rented.png")) : imagesCell.configure(with: #imageLiteral(resourceName: "house.png"))
+            if house.isRented {
+                print("No Disponible")
+            } else if !house.isRented {
+                print("Disponible")
+            }
+           // imagesCell.configure(with: #imageLiteral(resourceName: "house.png"))
             return imagesCell
         }
     
@@ -91,7 +94,7 @@ extension HouseDetailDataSource: UITableViewDataSource {
         switch rowIndex {
             case 0:
                 let cell = tableView.dequeueReusableCell(withIdentifier: HouseImageTableViewCell.identifier, for: indexPath)
-                return configureImagesCell(cell: cell)
+                return configureImagesCell(from: houseViewModel, cell: cell)
                 
             case 1:
                 let cell = tableView.dequeueReusableCell(withIdentifier: HouseDetailsTableViewCell.identifier, for: indexPath)

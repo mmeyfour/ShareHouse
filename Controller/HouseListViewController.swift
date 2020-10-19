@@ -11,6 +11,7 @@ import MapKit
 class HouseListViewController: UIViewController {
     lazy var networkController = NetworkController(session: URLSession(configuration: .default), houseListDelegate: self)
     var houseListDataSource: HouseListDataSource?
+    var selectedHouse: HouseSummaryViewModel?
     
     @IBOutlet weak var mapKit: MKMapView!
     @IBOutlet weak var segmentController: UISegmentedControl!
@@ -25,8 +26,8 @@ class HouseListViewController: UIViewController {
         setupMapKit()
         networkController.fetchHouseList()
         
-
     }
+
     
     func setupView() {
         print(2)
@@ -86,6 +87,15 @@ class HouseListViewController: UIViewController {
             coordinate: CLLocationCoordinate2D(latitude: 36.5783, longitude: -4.9499))
         mapKit.addAnnotation(istanPoint)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is HouseDetailViewController {
+            let vc = segue.destination as? HouseDetailViewController
+            vc?.selectedHouse = selectedHouse
+            
+        }
+    }
+    
 }
 
 private extension MKMapView {
@@ -103,7 +113,10 @@ private extension MKMapView {
 
 extension HouseListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath)
+        print("*****************")
+        print(houseListDataSource!)
+        print("la casa seleccionada es \(houseListDataSource!.houses[indexPath.row].name)")
+        selectedHouse = houseListDataSource!.houses[indexPath.row]
         performSegue(withIdentifier: HouseDetailViewController.segueIdentifier, sender: nil)
     }
 }
@@ -136,6 +149,7 @@ extension HouseListViewController: HouseListDelegate {
             mapKit.addAnnotation(Point)
         }
     }
+
 }
 
 
