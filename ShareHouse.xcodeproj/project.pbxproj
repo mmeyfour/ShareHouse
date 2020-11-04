@@ -55,6 +55,7 @@
 		5016D94B2539929D00710F9A /* IsRentedButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IsRentedButtonTableViewCell.xib; sourceTree = "<group>"; };
 		5016D9502539B22E00710F9A /* HouseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseAPI.swift; sourceTree = "<group>"; };
 		5016D9572539B39400710F9A /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		50299F9625522C0C00171170 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5071E3972535F60000D2A119 /* ShareHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5071E39A2535F60000D2A119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5071E39C2535F60000D2A119 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 		5071E38E2535F60000D2A119 = {
 			isa = PBXGroup;
 			children = (
+				50299F9625522C0C00171170 /* README.md */,
 				5016D8FE25371CBD00710F9A /* Controller */,
 				5016D8F725371B0A00710F9A /* View */,
 				5071E3B02535F6CF00D2A119 /* Sample */,
